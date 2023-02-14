@@ -1,42 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.activo{
+background-color: #520BFF;
+border-color: #520BFF;
+color: #fff;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+button:focus, button:focus-visible {
+  outline: 0px !important;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.iconSearch1 {
+  stroke-width:2px;fill:none;stroke:#999;stroke-miterlimit:10;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.iconSearch2 {
+  fill:none;stroke:#999;stroke-miterlimit:10;stroke-width:3px;
 }
