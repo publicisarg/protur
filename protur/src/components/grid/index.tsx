@@ -1,7 +1,64 @@
-import React from 'react'
+import GridCard from "./GridCard"
 
-export const index = () => {
+
+export const Griditems = () => {
+  const GridCardData = [
+    {
+      img: 'https://picsum.photos/400/225',
+      link: '#'
+    },
+    {
+      img: 'https://picsum.photos/400/225',
+      link: '#'
+    },
+    {
+      img: 'https://picsum.photos/400/225',
+      link: '#'
+    },
+    {
+      img: 'https://picsum.photos/400/225',
+      link: '#'
+    },
+    {
+      img: 'https://picsum.photos/400/225',
+      link: '#'
+    },
+    {
+      img: 'https://picsum.photos/400/225',
+      link: '#'
+    },
+    {
+      img: 'https://picsum.photos/400/225',
+      link: '#'
+    },
+    {
+      img: 'https://picsum.photos/400/225',
+      link: '#'
+    },
+    {
+      img: 'https://picsum.photos/400/225',
+      link: '#'
+    },
+    {
+      img: 'https://picsum.photos/400/225',
+      link: '#'
+    },
+    {
+      img: 'https://picsum.photos/400/225',
+      link: '#'
+    },
+    {
+      img: 'https://picsum.photos/400/225',
+      link: '#'
+    }
+    
+  ]
   return (
-    <div>index</div>
+    <>
+    {GridCardData.map((item) => (
+                 <GridCard img={item.img} link={""} />
+              ))}
+     
+    </>
   )
 }

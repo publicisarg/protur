@@ -1,4 +1,3 @@
-import React from 'react'
 interface GridCardProps {
   link: string
   img: string
@@ -10,7 +9,7 @@ const GridCard = ({link, img, alt }: GridCardProps) => {
       <article>
         <a href={link}>
             <figure>
-                <img src={img} alt={alt} />
+                <img src={img} alt={alt} className="rounded-lg"/>
             </figure>
             </a>
         </article>
