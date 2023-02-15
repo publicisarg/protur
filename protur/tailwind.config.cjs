@@ -8,8 +8,11 @@ module.exports = {
     fontFamily:{
       'quicksandlight':['quicksandlight', 'sans-serif']
     },
-    
-    extend: {},
+
+
+
+    extend: {
+      animation: {'spin-slow': 'spin 4s linear infinite', }},
   },
   plugins: [],
 }

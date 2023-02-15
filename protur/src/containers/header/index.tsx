@@ -8,7 +8,7 @@ export const Header = () => {
     
     <h1 className='mb-[122px] text-[137px] font-quicksandlight font-bold' >Bienvenido</h1>
 
-    <span className=' mb-[87px] w-[68px] h-[68px] rounded-full bg-[#520BFF] flex justify-center items-center'><BsArrowDown className='w-[33px] h-[33px] scroll-m-8 hover:scroll-m-0'/></span>
+    <span className=' mb-[87px] w-[68px] h-[68px] rounded-full bg-[#520BFF] flex justify-center items-center animate-bounce'><BsArrowDown className='w-[33px] h-[33px] scroll-m-8 hover:scroll-m-0'/></span>
     </div>
   )
 }
