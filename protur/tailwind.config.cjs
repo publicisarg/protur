@@ -5,6 +5,10 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily:{
+      'quicksandlight':['quicksandlight', 'sans-serif']
+    },
+    
     extend: {},
   },
   plugins: [],
