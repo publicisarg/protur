@@ -19,7 +19,7 @@ function App() {
     <>
       <Loading></Loading>
       <Header></Header> 
-        {mode == false? <Main/> : <Download imgsrc={goku} imgname={"Goku"} linksrc={"#"} setMode={setMode}/>}
+        {mode == true? <Main/> : <Download imgsrc={goku} imgname={"Goku"} linksrc={"#"} setMode={setMode}/>}
       <Footer></Footer>
      
     </>
