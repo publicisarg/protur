@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "grommet-icons": "^4.9.0",
+    "grommet-styles": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1"
