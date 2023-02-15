@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-}
+
 .activo{
 background-color: #520BFF;
 border-color: #520BFF;
