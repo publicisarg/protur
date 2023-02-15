@@ -3,11 +3,10 @@ import './App.css'
 import { Footer } from './containers/footer'
 import { Header } from './containers/header'
 import { Main } from './containers/main'
-<<<<<<< HEAD
-import { Loading } from './pages/loading'
-=======
 import goku from '../public/test.jpeg'
->>>>>>> 7442b304167fe56810d952b868a3a269251577b2
+import { Loading } from './pages/loading'
+import { Download } from './containers/download/normal'
+
 
 function App() {
 
@@ -20,11 +19,7 @@ function App() {
     <>
       <Loading></Loading>
       <Header></Header> 
-<<<<<<< HEAD
-      <Main></Main>
-=======
         {mode == false? <Main/> : <Download imgsrc={goku} imgname={"Goku"} linksrc={"#"} setMode={setMode}/>}
->>>>>>> 7442b304167fe56810d952b868a3a269251577b2
       <Footer></Footer>
      
     </>
