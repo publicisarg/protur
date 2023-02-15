@@ -6,7 +6,9 @@ export const Main = () => {
   return (
     <>
       <Search></Search>
+      <div className='border-solid border-t-2 pt-9'>
       <ListFilter></ListFilter>
+      </div>
     </>
   )
 }

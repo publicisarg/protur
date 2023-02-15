@@ -1,17 +1,14 @@
-import React from 'react'
-import Buton from '../../../common /buttoms'
+import { Standarbuttom, IconButtomRightDark, IconButtomRight, IconButtomLeft } from "../../../common /buttoms"
 
 
 
 export const ListFilter = () => {
   return (
-    <div className='grid grid-cols-4 gap-4'>
-     
-    <Buton activo="activo" name="Ciudades"></Buton>
-    <Buton activo="" name="Rutas"></Buton>
-    <Buton activo="" name="Pueblos"></Buton>
-    <Buton activo="" name="Naturaleza"></Buton>
-  
+    <div className='grid grid-cols-4 gap-4 max-w-xl'>
+      <Standarbuttom name="Ciudades" />
+      <Standarbuttom name="Rutas" />
+      <Standarbuttom name="Pueblos" />
+      <Standarbuttom name="Naturaleza" />
     </div>
   )
 }
