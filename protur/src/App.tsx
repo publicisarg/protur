@@ -1,17 +1,22 @@
+import { useState } from 'react'
 import './App.css'
 import { Download } from './containers/download/normal'
 import { Footer } from './containers/footer'
 import { Header } from './containers/header'
 import { Main } from './containers/main'
-
+import goku from '../public/test.jpeg'
 
 function App() {
+
+  const [mode, setMode] = useState<Boolean>(true);
+  const [imgsrc, setImgUrl] = useState<String>('');
+  const [imgname, setImgName] = useState<String>('');
+  const [linksrc, setLinkUrl] = useState<String>('');
 
   return (
     <>
       <Header></Header> 
-      <Main></Main>
-      {<Download imgsrc="https://cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/55QHEOQRQBEPTF5LRJK57MDEP4.jpg"/>}
+        {mode == false? <Main/> : <Download imgsrc={goku} imgname={"Goku"} linksrc={"#"} setMode={setMode}/>}
       <Footer></Footer>
     </>
   )
