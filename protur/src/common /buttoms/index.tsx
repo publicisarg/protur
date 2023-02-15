@@ -12,7 +12,7 @@ export const Standarbuttom = (props: { name: string | number | boolean | ReactEl
 }
 
 export const IconButtomLeft = (props: { name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined }) => {
-  return <button className={`rounded-3xl border-solid border-[#CCCCCC] text-[#999999] bg-transparent`}><GrLinkBottom />{props.name}</button>;
+  return <button className={`rounded-3xl border-solid border-[#CCCCCC] text-[#999999] bg-transparent`}>{props.name}<GrLinkBottom /></button>;
 }
 export const IconButtomRight = (props: { name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined }) => {
   return <button className={`rounded-3xl border-solid border-[#CCCCCC] text-[#999999] bg-transparent`}><GrLinkPrevious />{props.name}</button>;
