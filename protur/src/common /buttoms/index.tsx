@@ -1,6 +1,6 @@
 import { JSXElementConstructor, ReactElement, ReactFragment, ReactPortal, useState } from "react";
-import { GrBriefcase, GrLinkBottom, GrLinkPrevious } from "react-icons/gr";
-// import { Briefcase, LinkBottom, LinkPrevious } from 'grommet-icons';
+//import { GrBriefcase, GrLinkBottom, GrLinkPrevious } from "react-icons/gr";
+import { Briefcase, LinkBottom, LinkPrevious } from 'grommet-icons';
 
 
 export const Standarbuttom = (props: { name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined }) => {
