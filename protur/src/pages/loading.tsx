@@ -1,7 +1,7 @@
 import React from 'react'
 export const Loading = () => {
     return (
-    <div className='bg-gradient-to-tr from-[#52E6FF] to-[#520BFF] h-[730px] grid justify-items-center items-center overflow-hidden fixed top-0 left-0 right-0 z-50' >
+    <div className='bg-gradient-to-tr from-[#52E6FF] to-[#520BFF] h-full grid justify-items-center items-center overflow-hidden fixed top-0 left-0 right-0 z-50' >
 
         <svg xmlns="http://www.w3.org/2000/svg" className='w-[346px] absolute right-[64px] -top-[135px] animate-spin-slow' data-name="Capa 1" viewBox="0 0 466.23 466.24"><defs><linearGradient id="a" x1="4.85" x2="324.13" y1="-3.96" y2="329.01" data-name="Degradado sin nombre 11" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#520bff"/><stop offset=".12" stop-color="#520fff"/><stop offset=".26" stop-color="#521cff"/><stop offset=".4" stop-color="#5231ff"/><stop offset=".54" stop-color="#5250ff"/><stop offset=".69" stop-color="#5277ff"/><stop offset=".83" stop-color="#52a6ff"/><stop offset=".98" stop-color="#52deff"/><stop offset="1" stop-color="#52e6ff"/></linearGradient></defs><path d="M233.12 466.24C104.58 466.24 0 361.66 0 233.12S104.58 0 233.12 0c53.71 0 106.14 18.71 147.63 52.7 13.48 11.04 15.45 30.91 4.41 44.39s-30.91 15.45-44.39 4.41c-30.24-24.77-68.47-38.41-107.65-38.41-93.75 0-170.03 76.27-170.03 170.03s76.27 170.03 170.03 170.03 170.03-76.27 170.03-170.03c0-17.42 14.12-31.54 31.54-31.54s31.54 14.12 31.54 31.54c0 128.54-104.58 233.12-233.12 233.12Z" fill="url(#a)"/></svg>
         
