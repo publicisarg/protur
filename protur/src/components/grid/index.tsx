@@ -4,51 +4,51 @@ import GridCard from "./GridCard"
 export const Griditems = () => {
   const GridCardData = [
     {
-      img: 'https://picsum.photos/400/225',
+      img: 'lugares/01.jpeg',
       link: '#'
     },
     {
-      img: 'https://picsum.photos/400/225',
+      img: 'lugares/02.jpeg',
       link: '#'
     },
     {
-      img: 'https://picsum.photos/400/225',
+      img: 'lugares/03.jpg',
       link: '#'
     },
     {
-      img: 'https://picsum.photos/400/225',
+      img: 'lugares/04.jpeg',
       link: '#'
     },
     {
-      img: 'https://picsum.photos/400/225',
+      img: 'lugares/01.jpeg',
       link: '#'
     },
     {
-      img: 'https://picsum.photos/400/225',
+      img: 'lugares/02.jpeg',
       link: '#'
     },
     {
-      img: 'https://picsum.photos/400/225',
+      img: 'lugares/03.jpg',
       link: '#'
     },
     {
-      img: 'https://picsum.photos/400/225',
+      img: 'lugares/04.jpeg',
       link: '#'
     },
     {
-      img: 'https://picsum.photos/400/225',
+      img: 'lugares/01.jpeg',
       link: '#'
     },
     {
-      img: 'https://picsum.photos/400/225',
+      img: 'lugares/02.jpeg',
       link: '#'
     },
     {
-      img: 'https://picsum.photos/400/225',
+      img: 'lugares/03.jpg',
       link: '#'
     },
     {
-      img: 'https://picsum.photos/400/225',
+      img: 'lugares/04.jpeg',
       link: '#'
     }
     

@@ -17,7 +17,7 @@ function GridCard(props) {
 
   return (
     <>
-      <img src={props.img} alt={props.alt} onClick={handleClick} />
+      <img src={props.img} alt={props.alt} onClick={handleClick} className="rounded-lg md:max-w-[70%] w-full" />
 
       {showPopup && (
         <div className="popup h-full grid justify-items-center items-center overflow-hidden fixed top-0 left-0 right-0 z-50 bg-white">
