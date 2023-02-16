@@ -21,13 +21,16 @@ export const DownloadPopUp = (props: any) => {
   const control3 = useAnimation();
 
   function handleClose() {
-    control.start('hidden');
+    
     control1.start('hidden1');
     control2.start('hidden2');
     control3.start('hidden3');
-    const timer = setTimeout(() => {
+    setTimeout(() => {
+      control.start('hidden');
+    }, 500);
+    setTimeout(() => {
       props.setShowPopup(false);
-    }, 3000);
+    }, 1200);
   }
 
   useEffect(() => {
@@ -42,10 +45,10 @@ export const DownloadPopUp = (props: any) => {
     visible1: { opacity: 1, transition:{duration: 1}, x: 0, y: 0},
     visible2: { opacity: 1, transition:{duration: 2}, x: 0, y: 0},
     visible3: { opacity: 1, transition:{duration: 1}, x: 0, y: 0},
-    hidden: {opacity: 0, transition:{duration: 2}},
-    hidden1: { opacity: 0, y: -100, transition:{duration: 2} },
+    hidden: {opacity: 0, transition:{duration: 0.5}},
+    hidden1: { opacity: 0, y: -100, transition:{duration: 1} },
     hidden2: { opacity: 0, transition:{duration: 1} },
-    hidden3: { opacity: 0, y: 100, transition:{duration: 2} }
+    hidden3: { opacity: 0, y: 100, transition:{duration: 1} }
   }
 
   
