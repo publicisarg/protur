@@ -22,9 +22,9 @@ function GridCard(props:any) {
   }
 
   const descripcion = {
-    rotated: {rotate: 2, transition:{duration: 0.3}, scale: 1, y: -10, dropshadow: 20},
     hover: {opacity: 1, transition:{duration: 0.3}, x: 0, y: 0, rotate: 0, scale: 1},
-    rest: {opacity: 1, transition:{duration: 0.3}, x: 0, y: 0, rotate: 0, scale: 1}
+    rotated: {opacity:0, rotate: 2, transition:{duration: 0.3}, scale: 1, y: -10, dropshadow: 20},
+    rest: {opacity: 0, transition:{duration: 0.3}, x: 0, y: 0, rotate: 0, scale: 1}
   }
 
   useEffect(() => {
