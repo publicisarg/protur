@@ -6,7 +6,7 @@ export const Loading = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      //setShowPopup(false);
+      setShowPopup(false);
     }, 3000);
 
     return () => {
