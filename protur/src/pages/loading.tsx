@@ -11,16 +11,16 @@ export const Loading = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-        controlInicio4.start("hidden");
+        controlInicio2.start("hidden2");
       setTimeout(() => {
-        controlInicio2.start("hidden");
+        controlInicio3.start("hidden3");
+        setTimeout(() => {
+          controlInicio4.start("hidden4");
+          setTimeout(() => {
+            controlInicio1.start("hidden");
+          }, 300);
+        }, 300);
       }, 300);
-      setTimeout(() => {
-        controlInicio3.start("hidden");
-      }, 600);
-      setTimeout(() => {
-        controlInicio1.start("hidden");
-      }, 900);
       setTimeout(() => {
         setShowPopup(false);
       }, 1200);
@@ -28,8 +28,11 @@ export const Loading = () => {
   }, []);
 
   const variantesInicio = {
-    visible: {opacity: 1, transition:{duration: 0.25}, x: 0, y: 0, rotate: 0, scale: 1},
-    hidden: {opacity: 0, transition:{duration: 0.25}}
+    visible: {opacity: 1, transition:{duration: 0.5}, x: 0, y: 0, rotate: 0, scale: 1},
+    hidden: {opacity: 0, transition:{duration: 0.5}},
+    hidden2: {opacity: 0, transition:{duration: 0.5}, x: 2000},
+    hidden3: {opacity: 0, transition:{duration: 0.5}, x: -2000},
+    hidden4: {opacity: 0, transition:{duration: 0.5}, y: -200}
   }
 
   return (
