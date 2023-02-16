@@ -20,3 +20,13 @@ button {
 button:hover {
   border-color: #646cff;
 }
+
+
+.transition-all  li {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+li.aparecer {
+  opacity: 1;
+}
