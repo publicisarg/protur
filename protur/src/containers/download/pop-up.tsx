@@ -18,7 +18,7 @@ export const DownloadPopUp = (props: any) => {
   }
 
     return (
-      <div className="popup h-full grid justify-items-center items-center overflow-hidden fixed top-0 left-0 right-0 z-50 bg-white">
+      <div className="popup h-[100vh] grid justify-items-center items-center overflow-hidden fixed top-0 left-0 right-0 z-50 bg-white">
         <div className="container px-12 py-8 rounded-lg flex flex-col z-50 justify-center items-center bg-white">
           <img src={logo} className="pb-6 w-40" />
           <img className="rounded-lg md:max-h-[50vh] w-auto" src={props.imgsrc} />
