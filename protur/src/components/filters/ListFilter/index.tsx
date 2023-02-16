@@ -39,7 +39,7 @@ export const ListFilter = (props: any) => {
   return (
     <div>
     
-      <div className='grid md:grid-cols-2 lg:grid-cols-8 gap-6'>
+      <div className='grid px-5 md:p-0 grid-cols-2 lg:grid-cols-8 gap-6'>
         {categorias.map((categoria) => (
          
           <button className={`rounded-3xl border-solid border-[#CCCCCC] text-[#999999] bg-transparent ${categoriaSeleccionada === categoria ? 'activo' : ''}`} key={categoria} onClick={() => handleCategoriaClick(categoria)} >
@@ -49,7 +49,7 @@ export const ListFilter = (props: any) => {
       </div>
       {categoriaSeleccionada && (
         
-        <ul className='grid md:grid-cols-2 lg:grid-cols-3 gap-24  my-10'>
+        <ul className='p-5 md:p-0 grid md:grid-cols-2 lg:grid-cols-3 gap-24  my-10'>
           {contenidoFiltrado[0].elementos.map((elemento) => (
             <li key={elemento}>
               <GridCard img={elemento} link={""} />

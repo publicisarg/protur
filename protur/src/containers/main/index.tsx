@@ -6,7 +6,7 @@ import { Griditems } from '../../components/grid'
 export const Main = () => {
   return (
     <div className='container mx-auto items-center'>
-      <div className='my-[50px] text-center text-[32px]'>
+      <div className='my-[50px] text-center text-[22px] md:text-[32px]'>
         <p className='font-quicksandlight font-bold'>Encuentra un fondo de pantalla desde el que quieras trabajar</p>
         </div>
       <Search></Search>
