@@ -16,8 +16,8 @@ function GridCard(props:any) {
   const control = useAnimation();
 
   const variantes = {
-    visible: {opacity: 1, transition:{duration: 0.25}, x: 0, y: 0, rotate: 0},
-    rotated: {rotate: 4, transition:{duration: 0.5}},
+    visible: {opacity: 1, transition:{duration: 0.5}, x: 0, y: 0, rotate: 0, scale: 1},
+    rotated: {rotate: 2, transition:{duration: 0.5}, scale: 1.05},
     hidden: {opacity: 0, x: 1000, transition:{duration: 0.25}}
   }
 
