@@ -22,11 +22,11 @@ export const DownloadPopUp = (props: any) => {
   const variantes = {
     visible: { opacity: 1, transition:{duration: 0.25}, x: 0, y: 0},
     visible1: { opacity: 1, transition:{duration: 1}, x: 0, y: 0},
-    visible2: { opacity: 1, transition:{duration: 1}, x: 0, y: 0},
+    visible2: { opacity: 1, transition:{duration: 2}, x: 0, y: 0},
     visible3: { opacity: 1, transition:{duration: 1}, x: 0, y: 0},
     hidden: {opacity: 0},
-    hidden1: { opacity: 0, x: -1000 },
-    hidden2: { opacity: 0, x: 1000 },
+    hidden1: { opacity: 0, y: -100 },
+    hidden2: { opacity: 0 },
     hidden3: { opacity: 0, y: 100 }
   }
 
