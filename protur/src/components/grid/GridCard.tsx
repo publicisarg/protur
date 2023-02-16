@@ -18,11 +18,12 @@ function GridCard(props:any) {
   const variantes = {
     visible: {opacity: 1, transition:{duration: 0.3}, x: 0, y: 0, rotate: 0, scale: 1},
     rotated: {rotate: 2, transition:{duration: 0.3}, scale: 1, y: -10, dropshadow: 20},
+    hover: {rotate: -2, transition:{duration: 0.3}, scale: 1, y: -10, dropshadow: 20},
     hidden: {opacity: 0, transition:{duration: 0.25}}
   }
 
   const descripcion = {
-    hover: {opacity: 1, transition:{duration: 0.3}, x: 0, y: 0, rotate: 0, scale: 1},
+    hover: {rotate: -2, opacity: 1, transition:{duration: 0.3}, x: 0, y: -10, scale: 1},
     rotated: {opacity:0, rotate: 2, transition:{duration: 0.3}, scale: 1, y: -10, dropshadow: 20},
     rest: {opacity: 0, transition:{duration: 0.3}, x: 0, y: 0, rotate: 0, scale: 1}
   }
@@ -47,7 +48,7 @@ function GridCard(props:any) {
   return (
     <>
       <motion.div initial="rest" whileHover="hover" animate={control} className="relative w-full h-full inset-0 mx-0 my-0">
-        <motion.img variants={variantes} initial="hidden" animate={control} src={props.img} alt={props.alt} onClick={handleClick} className="rounded-lg h-60 object-cover w-full drop-shadow-lg cursor-pointer" />
+        <motion.img variants={variantes} initial="hidden" whileHover="hover" animate={control} src={props.img} alt={props.alt} onClick={handleClick} className="rounded-lg h-60 object-cover w-full drop-shadow-lg cursor-pointer" />
         <motion.p variants={descripcion} className="absolute inset-0 justify-center items-center flex text-white bg-black/50 rounded-lg pointer-events-none">{props.alt}</motion.p>
       </motion.div>
       
