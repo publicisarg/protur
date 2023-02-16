@@ -13,9 +13,7 @@ export const Main = () => {
       <div className='border-solid border-t-2 py-9'>
         <ListFilter></ListFilter>
       </div>
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-24'>
-        <Griditems />
-      </div>
+      
     </div>
   )
 }
