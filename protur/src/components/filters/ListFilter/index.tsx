@@ -66,7 +66,7 @@ export const ListFilter = () => {
       <div className='grid px-5 md:p-0 grid-cols-2 lg:grid-cols-8 gap-6'>
         {categorias.map((categoria) => (
           <button
-            className={`rounded-3xl border-solid border-[#CCCCCC] text-[#999999] bg-transparent ${
+            className={`rounded-3xl border-solid border-[#CCCCCC] text-[#999999] bg-white ${
               categoriaSeleccionada === categoria ? 'activo' : ''
             }`}
             key={categoria}
