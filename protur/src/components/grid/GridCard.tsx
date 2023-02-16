@@ -27,7 +27,7 @@ function GridCard(props:any) {
 
   return (
     <>
-      <img src={props.img} alt={props.alt} onClick={handleClick} className="rounded-lg h-60 object-cover w-full drop-shadow-lg  cursor-pointer" />
+      <img src={props.img} alt={props.alt} onClick={handleClick} className="rounded-lg h-60 object-cover w-full drop-shadow-lg cursor-pointer" />
 
       {showPopup && (
         <DownloadPopUp imgsrc={props.img} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc}/>
