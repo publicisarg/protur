@@ -21,7 +21,6 @@ export const DownloadPopUp = (props: any) => {
   const control3 = useAnimation();
 
   function handleClose() {
-    
     control1.start('hidden1');
     control2.start('hidden2');
     control3.start('hidden3');
@@ -50,8 +49,6 @@ export const DownloadPopUp = (props: any) => {
     hidden2: { opacity: 0, transition:{duration: 1} },
     hidden3: { opacity: 0, y: 100, transition:{duration: 1} }
   }
-
-  
 
     return ( 
       <motion.div variants={variantes} initial="hidden" animate={control} className="popup h-[100vh] grid justify-items-center items-center overflow-hidden fixed top-0 left-0 right-0 z-50 bg-white">

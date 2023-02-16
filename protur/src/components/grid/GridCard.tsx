@@ -1,10 +1,6 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { DownloadPopUp } from '../../containers/download/pop-up';
-import logo from '../../../public/logoblack.svg'
-import { IconButtomLeft, IconButtomRight, IconButtomRightDark } from '../../common /buttoms'
-import { Close } from 'grommet-icons';
-
-
+import { motion, useAnimation } from "framer-motion";
 
 function GridCard(props:any) {
   const handleDescarga = () => {
@@ -17,17 +13,34 @@ function GridCard(props:any) {
   }
 
   const [showPopup, setShowPopup] = useState(false);
+  const control = useAnimation();
+
+  const variantes = {
+    visible: {opacity: 1, transition:{duration: 0.25}, x: 0, y: 0, rotate: 0},
+    rotated: {rotate: 4, transition:{duration: 0.5}},
+    hidden: {opacity: 0, x: 1000, transition:{duration: 0.25}}
+  }
+
+  useEffect(() => {
+    control.start("visible");
+  }, []);
+
+  useEffect(() => {
+    if (!showPopup) {
+      control.start("visible");
+    }
+  });
 
   function handleClick() {
-    setShowPopup(true);
-  }
-  function handleClose() {
-    setShowPopup(false);
+    control.start("rotated");
+    setTimeout(() => {
+      setShowPopup(true);
+    }, 500);
   }
 
   return (
     <>
-      <img src={props.img} alt={props.alt} onClick={handleClick} className="rounded-lg h-60 object-cover w-full drop-shadow-lg cursor-pointer" />
+      <motion.img variants={variantes} initial="hidden" animate={control} src={props.img} alt={props.alt} onClick={handleClick} className="rounded-lg h-60 object-cover w-full drop-shadow-lg cursor-pointer" />
 
       {showPopup && (
         <DownloadPopUp imgsrc={props.img} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc}/>
