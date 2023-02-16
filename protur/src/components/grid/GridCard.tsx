@@ -16,9 +16,14 @@ function GridCard(props:any) {
   const control = useAnimation();
 
   const variantes = {
-    visible: {opacity: 1, transition:{duration: 0.5}, x: 0, y: 0, rotate: 0, scale: 1},
-    rotated: {rotate: 2, transition:{duration: 0.5}, scale: 1.05},
-    hidden: {opacity: 0, x: 1000, transition:{duration: 0.25}}
+    visible: {opacity: 1, transition:{duration: 0.3}, x: 0, y: 0, rotate: 0, scale: 1},
+    rotated: {rotate: 0, transition:{duration: 0.3}, scale: 1, y: -10, dropshadow: 20},
+    hidden: {opacity: 0, transition:{duration: 0.25}}
+  }
+
+  const descripcion = {
+    hover: {opacity: 1, transition:{duration: 0.5}},
+    rest: {opacity: 0, transition:{duration: 0.5}}
   }
 
   useEffect(() => {
@@ -40,7 +45,11 @@ function GridCard(props:any) {
 
   return (
     <>
-      <motion.img variants={variantes} initial="hidden" animate={control} src={props.img} alt={props.alt} onClick={handleClick} className="rounded-lg h-60 object-cover w-full drop-shadow-lg cursor-pointer" />
+      <motion.div initial="rest" whileHover="hover" animate="rest" className="relative w-full h-full inset-0 mx-0 my-0">
+        <motion.img variants={variantes} initial="hidden" animate={control} src={props.img} alt={props.alt} onClick={handleClick} className="rounded-lg h-60 object-cover w-full drop-shadow-lg cursor-pointer" />
+        <motion.p variants={descripcion} className="absolute inset-0 justify-center items-center flex text-white bg-black/50 rounded-lg pointer-events-none">{props.alt}</motion.p>
+      </motion.div>
+      
 
       {showPopup && (
         <DownloadPopUp imgsrc={props.img} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc}/>

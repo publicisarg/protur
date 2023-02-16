@@ -80,8 +80,8 @@ export const ListFilter = () => {
         <ul
           className={`p-5 md:p-0 grid md:grid-cols-2 lg:grid-cols-3 gap-24 my-10 elementos  ${animation.showAppearClass ? 'aparecer' : ''} ${animation.transiciones ? 'transition-all duration-500' : ''}`}>
         {contenidoFiltrado[0].elementos.map((elemento, index) => (
-          <li key={elemento} className={` ${animation.showAppearClass ? 'aparecer' : ''}`} style={{ transitionDelay: `${index * 100}ms` }}>
-            <GridCard img={elemento} link={""} />
+          <li key={elemento} className={` ${animation.showAppearClass ? 'aparecer' : ''}`} style={{ transitionDelay: `${index * 30}ms` }}>
+            <GridCard img={elemento} alt={"Argentina"} link={""} />
           </li>
         ))}
       </ul>

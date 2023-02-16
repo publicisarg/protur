@@ -1,7 +1,6 @@
 import logo from '../../../public/logoblack.svg'
 import { IconButtomLeft, IconButtomRight, IconButtomRightDark } from '../../common /buttoms'
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 export const DownloadPopUp = (props: any) => {
