@@ -46,9 +46,9 @@ export const Loading = () => {
   
 
   const paths = {
-    path0: {pathLength: 0, transition:{duration: 2}, stroke: "white", fill: "#FFFFFF00", strokeWidth: 0.4},
+    path0: {pathLength: 0, transition:{duration: 2}, stroke: "white", fill: "#FFFFFF00", strokeWidth: 0.2},
     path1: {pathLength: 1, transition:{duration: 2}, stroke: "white", fill: "#FFFFFF00" },
-    path2: {fill: "#FFFFFFFF", transition:{duration: 2}}
+    path2: {fill: "#FFFFFFFF", transition:{duration: 2}, strokeWidth: 0}
   }
 
   return (
