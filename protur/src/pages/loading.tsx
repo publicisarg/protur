@@ -38,8 +38,8 @@ export const Loading = () => {
   const variantesInicio = {
     visible: {opacity: 1, transition:{duration: 0.5}, x: 0, y: 0, rotate: 0, scale: 1},
     hidden: {opacity: 0, transition:{duration: 0.5}, ease: "easeOut"},
-    hidden2: {opacity: 0, transition:{duration: 0.5}, x: -1000, ease: "easeIn"},
-    hidden3: {opacity: 0, transition:{duration: 0.5}, x: 1000, ease: "easeIn"},
+    hidden2: {opacity: 0, transition:{duration: 0.5}, x: 1000, ease: "easeIn"},
+    hidden3: {opacity: 0, transition:{duration: 0.5}, x: -1000, ease: "easeIn"},
     hidden4: {opacity: 0, transition:{duration: 0.5}, y: -400, ease: "easeIn"}
   }
 
