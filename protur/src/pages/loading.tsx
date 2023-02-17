@@ -32,7 +32,7 @@ export const Loading = () => {
     controlPath.start("path1");
     setTimeout(() => {
       controlPath.start("path2");
-    }, 2000);
+    }, 1000);
   }, []);
 
   const variantesInicio = {
