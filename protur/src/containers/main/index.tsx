@@ -9,7 +9,7 @@ export const Main = () => {
       <div className='my-[50px] text-center text-[22px] md:text-[32px]'>
         <p className='font-quicksandlight font-bold'>Encuentra un fondo de pantalla desde el que quieras trabajar</p>
         </div>
-      <Search></Search>
+      {/*<Search></Search>*/}
       <div className='border-solid border-t-2 py-9 relative'>
         <ListFilter></ListFilter>
     

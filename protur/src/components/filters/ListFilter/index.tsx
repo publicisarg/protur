@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react';
 import GridCard from '../../grid/GridCard';
+import BuenosAires from '../../../internal-data/buenos-aires.json'
+import CABA from '../../../internal-data/caba.json'
+import Catamarca from '../../../internal-data/catamarca.json'
 
 const categorias = ['Ciudades', 'Rutas', 'Pueblos', 'Naturaleza'];
+
+const provincias = [BuenosAires, CABA, Catamarca];
 
 const contenido = [
   {
@@ -64,7 +69,7 @@ export const ListFilter = () => {
   return (
     <div className='listFilter'>
       <div className='grid px-5 md:p-0 grid-cols-2 lg:grid-cols-8 gap-6'>
-        {categorias.map((categoria) => (
+        {/*{categorias.map((categoria) => (
           <button
             className={`rounded-3xl border-solid border-[#CCCCCC] text-[#999999] bg-white ${
               categoriaSeleccionada === categoria ? 'activo' : ''
@@ -85,6 +90,15 @@ export const ListFilter = () => {
           </li>
         ))}
       </ul>
-    )}
+    )}*/}
+    <>
+      {
+        provincias.forEach(provincia => {
+          console.log(provincia);
+        })
+      };
+    </>
+      
+    </div>
   </div>
 )};
