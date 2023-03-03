@@ -22,11 +22,23 @@ export const List = (props:any) => {
         setContenidoFiltrado(contenido.filter((item:any) => item.categoria === props.categoriaSeleccionada));
     }, [props.categoriaSeleccionada]);
 
-    function test() {
-        for (let values of contenidoFiltrado.values()) {
-            return values;
+    function cardsLoop(datos:any) {
+        let cardsJSX = [];
+
+        for (var i = 0; i < datos.elementos.length; i++) {
+            cardsJSX.push(cardsReturn(datos.elementos[i]));
         }
-    };
+
+        return cardsJSX;
+    }
+
+    function cardsReturn(datos:any) {
+        return (
+            <li key={datos.id}>
+                <GridCard img={datos.Imagen} alt={datos.Nombre_del_Lugar} link={datos.url_destino} />
+            </li>
+        )
+    }
 
     return (
         <>
@@ -34,10 +46,7 @@ export const List = (props:any) => {
                 <ul
                     className={`p-5 md:p-0 grid md:grid-cols-2 lg:grid-cols-3 gap-24 my-10 elementos`}>
                     {contenidoFiltrado.map((elemento:any, index:any) => (
-                        <li key={elemento.elementos[0].id}>
-                            <GridCard img={elemento.elementos[0].Imagen} alt={elemento.elementos[0].Nombre_del_Lugar} link={elemento.elementos[0].url_destino} />
-                            <p>{}</p>
-                        </li>
+                        cardsLoop(elemento)
                     ))}
                 </ul>
             )}

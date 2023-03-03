@@ -19,7 +19,6 @@ export const ListFilter = () => {
       setLugares(response.data);
     }
     fetchData();
-    //fetch('https://desarrollodesitios0.site/crude/json.php').then(response => response.json()).then(data => { setLugares(data) }).catch(error => console.error(error));
   }, []);
 
   const contenido:any = blah;
@@ -57,6 +56,7 @@ export const ListFilter = () => {
     setContenidoFiltrado(contenido.filter((item:any) => item.categoria === categoriaSeleccionada));
   }, []);
 
+  
   return (
     <div className='listFilter'>
       <div className='grid px-5 md:p-0 grid-cols-2 lg:grid-cols-8 gap-6'>
