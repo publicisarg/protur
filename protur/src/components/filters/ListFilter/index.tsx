@@ -1,80 +1,9 @@
 import { useEffect, useState } from 'react';
 import GridCard from '../../grid/GridCard';
 import axios from 'axios';
+import blah from './blah.json'
 
 const categorias = ['Ciudades', 'Rutas', 'Pueblos', 'Naturaleza'];
-
-
-/*const contenido = [
-  {
-    categoria: 'Ciudades',
-    elementos: [
-      {
-        "id": "6",
-        "Nombre_del_Lugar": "SARLANGA3",
-        "Imagen": "lugares/03.jpeg",
-        "url_destino": "#"
-      },
-      {
-        "id": "6",
-        "Nombre_del_Lugar": "SARLANGA2",
-        "Imagen": "lugares/02.jpeg",
-        "url_destino": "#"
-      }
-    ]
-  },
-  {
-    categoria: 'Rutas',
-    elementos: [
-      {
-        "id": "6",
-        "Nombre_del_Lugar": "SARLANGA",
-        "Imagen": "lugares/01.jpeg",
-        "url_destino": "#"
-      },
-      {
-        "id": "6",
-        "Nombre_del_Lugar": "SARLANGA2",
-        "Imagen": "lugares/02.jpeg",
-        "url_destino": "#"
-      }
-    ]
-  },
-  {
-    categoria: 'Pueblos',
-    elementos: [
-      {
-        "id": "6",
-        "Nombre_del_Lugar": "SARLANGA",
-        "Imagen": "lugares/01.jpeg",
-        "url_destino": "#"
-      },
-      {
-        "id": "6",
-        "Nombre_del_Lugar": "SARLANGA3",
-        "Imagen": "lugares/03.jpeg",
-        "url_destino": "#"
-      }
-    ]
-  },
-  {
-    categoria: 'Naturaleza',
-    elementos: [
-      {
-        "id": "6",
-        "Nombre_del_Lugar": "SARLANGA4",
-        "Imagen": "lugares/04.jpeg",
-        "url_destino": "#"
-      },
-      {
-        "id": "6",
-        "Nombre_del_Lugar": "SARLANGA2",
-        "Imagen": "lugares/02.jpeg",
-        "url_destino": "#"
-      }
-    ]
-  }
-];*/
 
 export const ListFilter = () => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Ciudades');
@@ -83,16 +12,16 @@ export const ListFilter = () => {
   const [animation, setAnimation] = useState({ showAppearClass: false, transiciones: true });
   const [lugares, setLugares] = useState([]);
 
-  //useEffect(() => {
-  async function fetchData() {
-    const response = await axios.get('https://desarrollodesitios0.site/crude/json.php');
-    setLugares(response.data);
-    console.log('test');
-  }
-  fetchData();
-  //}, []);
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios.get('https://desarrollodesitios0.site/crude/json.php');
+      setLugares(response.data);
+    }
+    fetchData();
+    //fetch('https://desarrollodesitios0.site/crude/json.php').then(response => response.json()).then(data => { setLugares(data) }).catch(error => console.error(error));
+  }, []);
 
-  const contenido:{categoria:string,elementos:string[]}[] = lugares;
+  const contenido:any = blah;
   console.log(lugares);
 
   const handleCategoriaClick = (categoria:any) => {
@@ -105,7 +34,7 @@ export const ListFilter = () => {
     // esperar un corto tiempo para que se complete la transición
     setTimeout(() => {
       // filtrar los elementos según la categoría seleccionada
-      const filteredElements = contenido.filter((element) => element.categoria === categoria);
+      const filteredElements = contenido.filter((element:any) => element.categoria === categoria);
       setContenidoFiltrado(filteredElements);
 
       // volver a agregar la clase "aparecer" después de renderizar los nuevos elementos
@@ -114,18 +43,18 @@ export const ListFilter = () => {
   };
 
   const [contenidoFiltrado, setContenidoFiltrado] = useState(
-    contenido.filter((item) => item.categoria === categoriaSeleccionada)
+    contenido.filter((item:any) => item.categoria === categoriaSeleccionada)
   );
 
   useEffect(() => {
     setAnimation({ showAppearClass: animation.showAppearClass, transiciones: true });
-    setContenidoFiltrado(contenido.filter((item) => item.categoria === categoriaSeleccionada));
+    setContenidoFiltrado(contenido.filter((item:any) => item.categoria === categoriaSeleccionada));
   }, [categoriaSeleccionada]);
 
   useEffect(() => {
     // Aparecer los elementos de la categoría "Ciudades" al iniciar la página
     setAnimation({ showAppearClass: true, transiciones: animation.transiciones });
-    setContenidoFiltrado(contenido.filter((item) => item.categoria === categoriaSeleccionada));
+    setContenidoFiltrado(contenido.filter((item:any) => item.categoria === categoriaSeleccionada));
   }, []);
 
   return (
@@ -146,7 +75,7 @@ export const ListFilter = () => {
       {categoriaSeleccionada && (
         <ul
           className={`p-5 md:p-0 grid md:grid-cols-2 lg:grid-cols-3 gap-24 my-10 elementos  ${animation.showAppearClass ? 'aparecer' : ''} ${animation.transiciones ? 'transition-all duration-500' : ''}`}>
-        {contenidoFiltrado[0].elementos.map((elemento, index) => (
+        {contenidoFiltrado[0].elementos.map((elemento:any, index:any) => (
           <li key={elemento.Nombre_del_Lugar} className={` ${animation.showAppearClass ? 'aparecer' : ''}`} style={{ transitionDelay: `${index * 30}ms` }}>
             <GridCard img={elemento.Imagen} alt={elemento.Nombre_del_Lugar} link={elemento.url_destino} />
           </li>
