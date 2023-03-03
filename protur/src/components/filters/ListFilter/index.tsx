@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import GridCard from '../../grid/GridCard';
+import List from './list';
 import axios from 'axios';
 import blah from './blah.json'
 
@@ -22,7 +23,6 @@ export const ListFilter = () => {
   }, []);
 
   const contenido:any = blah;
-  console.log(lugares);
 
   const handleCategoriaClick = (categoria:any) => {
     setCategoriaSeleccionada(categoria);
@@ -72,14 +72,5 @@ export const ListFilter = () => {
           </button>
         ))}
       </div>
-      {categoriaSeleccionada && (
-        <ul
-          className={`p-5 md:p-0 grid md:grid-cols-2 lg:grid-cols-3 gap-24 my-10 elementos  ${animation.showAppearClass ? 'aparecer' : ''} ${animation.transiciones ? 'transition-all duration-500' : ''}`}>
-        {contenidoFiltrado[0].elementos.map((elemento:any, index:any) => (
-          <li key={elemento.Nombre_del_Lugar} className={` ${animation.showAppearClass ? 'aparecer' : ''}`} style={{ transitionDelay: `${index * 30}ms` }}>
-            <GridCard img={elemento.Imagen} alt={elemento.Nombre_del_Lugar} link={elemento.url_destino} />
-          </li>
-        ))}
-      </ul>
-    )}
+      <List contenido={contenidoFiltrado[0].elementos} categoriaSeleccionada={categoriaSeleccionada} />
   </div>)};
