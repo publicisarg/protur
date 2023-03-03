@@ -5,24 +5,76 @@ import axios from 'axios';
 const categorias = ['Ciudades', 'Rutas', 'Pueblos', 'Naturaleza'];
 
 
-/*const contenido = [
+const contenido = [
   {
     categoria: 'Ciudades',
-    elementos: ['lugares/01.jpeg', 'lugares/02.jpeg', 'lugares/03.jpg', 'lugares/04.jpeg']
+    elementos: [
+      {
+        "id": "6",
+        "Nombre_del_Lugar": "SARLANGA3",
+        "Imagen": "lugares/03.jpeg",
+        "url_destino": "#"
+      },
+      {
+        "id": "6",
+        "Nombre_del_Lugar": "SARLANGA2",
+        "Imagen": "lugares/02.jpeg",
+        "url_destino": "#"
+      }
+    ]
   },
   {
     categoria: 'Rutas',
-    elementos: ['lugares/04.jpeg', 'lugares/02.jpeg', 'lugares/03.jpg', 'lugares/01.jpeg']
+    elementos: [
+      {
+        "id": "6",
+        "Nombre_del_Lugar": "SARLANGA",
+        "Imagen": "lugares/01.jpeg",
+        "url_destino": "#"
+      },
+      {
+        "id": "6",
+        "Nombre_del_Lugar": "SARLANGA2",
+        "Imagen": "lugares/02.jpeg",
+        "url_destino": "#"
+      }
+    ]
   },
   {
     categoria: 'Pueblos',
-    elementos: ['lugares/02.jpeg', 'lugares/03.jpg', 'lugares/04.jpeg', 'lugares/01.jpeg']
+    elementos: [
+      {
+        "id": "6",
+        "Nombre_del_Lugar": "SARLANGA",
+        "Imagen": "lugares/01.jpeg",
+        "url_destino": "#"
+      },
+      {
+        "id": "6",
+        "Nombre_del_Lugar": "SARLANGA3",
+        "Imagen": "lugares/03.jpeg",
+        "url_destino": "#"
+      }
+    ]
   },
   {
     categoria: 'Naturaleza',
-    elementos: ['lugares/03.jpg', 'lugares/02.jpeg', 'lugares/04.jpeg', 'lugares/01.jpeg']
+    elementos: [
+      {
+        "id": "6",
+        "Nombre_del_Lugar": "SARLANGA4",
+        "Imagen": "lugares/04.jpeg",
+        "url_destino": "#"
+      },
+      {
+        "id": "6",
+        "Nombre_del_Lugar": "SARLANGA2",
+        "Imagen": "lugares/02.jpeg",
+        "url_destino": "#"
+      }
+    ]
   }
-];*/
+];
 
 export const ListFilter = () => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Ciudades');
@@ -31,15 +83,16 @@ export const ListFilter = () => {
   const [animation, setAnimation] = useState({ showAppearClass: false, transiciones: true });
   const [lugares, setLugares] = useState([]);
 
-  useEffect(() => {
-    async function fetchData() {
-      const response = await axios.get('https://desarrollodesitios0.site/crude/json.php');
-      setLugares(response.data);
-    }
+  //useEffect(() => {
+  async function fetchData() {
+    const response = await axios.get('https://desarrollodesitios0.site/crude/json.php');
+    setLugares(response.data);
+    console.log('test');
+  }
   fetchData();
-  }, []);
+  //}, []);
 
-  const contenido:{categoria:string,elementos:string[]}[] = lugares;
+  //const contenido:{categoria:string,elementos:string[]}[] = lugares;
   console.log(lugares);
 
   const handleCategoriaClick = (categoria:any) => {
@@ -100,8 +153,8 @@ export const ListFilter = () => {
         <ul
           className={`p-5 md:p-0 grid md:grid-cols-2 lg:grid-cols-3 gap-24 my-10 elementos  ${animation.showAppearClass ? 'aparecer' : ''} ${animation.transiciones ? 'transition-all duration-500' : ''}`}>
         {contenidoFiltrado[0].elementos.map((elemento, index) => (
-          <li key={elemento} className={` ${animation.showAppearClass ? 'aparecer' : ''}`} style={{ transitionDelay: `${index * 30}ms` }}>
-            <GridCard img={elemento} alt={"Argentina"} link={""} />
+          <li key={elemento.Nombre_del_Lugar} className={` ${animation.showAppearClass ? 'aparecer' : ''}`} style={{ transitionDelay: `${index * 30}ms` }}>
+            <GridCard img={elemento.Imagen} alt={elemento.Nombre_del_Lugar} link={elemento.url_destino} />
           </li>
         ))}
       </ul>

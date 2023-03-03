@@ -6,7 +6,7 @@ function GridCard(props:any) {
   const handleDescarga = () => {
     const descarga = document.createElement('a');
     descarga.href = props.img;
-    descarga.download = 'Paisaje-Argentina.jpg';
+    descarga.download = props.alt;
     document.body.appendChild(descarga);
     descarga.click();
     document.body.removeChild(descarga);
