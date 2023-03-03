@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import GridCard from '../../grid/GridCard';
+import axios from 'axios';
 
 const categorias = ['Ciudades', 'Rutas', 'Pueblos', 'Naturaleza'];
 
-const contenido = [
+
+/*const contenido = [
   {
     categoria: 'Ciudades',
     elementos: ['lugares/01.jpeg', 'lugares/02.jpeg', 'lugares/03.jpg', 'lugares/04.jpeg']
@@ -20,13 +22,25 @@ const contenido = [
     categoria: 'Naturaleza',
     elementos: ['lugares/03.jpg', 'lugares/02.jpeg', 'lugares/04.jpeg', 'lugares/01.jpeg']
   }
-];
-export const ListFilter = () => {
+];*/
 
+export const ListFilter = () => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Ciudades');
   const [busqueda, setBusqueda] = useState('');
   const [isActive, setActive] = useState(false);
   const [animation, setAnimation] = useState({ showAppearClass: false, transiciones: true });
+  const [lugares, setLugares] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios.get('https://desarrollodesitios0.site/crude/json.php');
+      setLugares(response.data);
+    }
+  fetchData();
+  }, []);
+
+  const contenido:{categoria:string,elementos:string[]}[] = lugares;
+  console.log(lugares);
 
   const handleCategoriaClick = (categoria:any) => {
     setCategoriaSeleccionada(categoria);
@@ -61,6 +75,12 @@ export const ListFilter = () => {
     setContenidoFiltrado(contenido.filter((item) => item.categoria === categoriaSeleccionada));
   }, []);
 
+  /*const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Ciudades');
+
+  lugares.forEach(categorias => {
+    console.log(categorias);
+  });*/
+
   return (
     <div className='listFilter'>
       <div className='grid px-5 md:p-0 grid-cols-2 lg:grid-cols-8 gap-6'>
@@ -86,5 +106,4 @@ export const ListFilter = () => {
         ))}
       </ul>
     )}
-  </div>
-)};
+  </div>)};
