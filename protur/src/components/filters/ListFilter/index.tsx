@@ -5,7 +5,7 @@ import axios from 'axios';
 const categorias = ['Ciudades', 'Rutas', 'Pueblos', 'Naturaleza'];
 
 
-const contenido = [
+/*const contenido = [
   {
     categoria: 'Ciudades',
     elementos: [
@@ -74,7 +74,7 @@ const contenido = [
       }
     ]
   }
-];
+];*/
 
 export const ListFilter = () => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Ciudades');
@@ -92,7 +92,7 @@ export const ListFilter = () => {
   fetchData();
   //}, []);
 
-  //const contenido:{categoria:string,elementos:string[]}[] = lugares;
+  const contenido:{categoria:string,elementos:string[]}[] = lugares;
   console.log(lugares);
 
   const handleCategoriaClick = (categoria:any) => {
@@ -127,12 +127,6 @@ export const ListFilter = () => {
     setAnimation({ showAppearClass: true, transiciones: animation.transiciones });
     setContenidoFiltrado(contenido.filter((item) => item.categoria === categoriaSeleccionada));
   }, []);
-
-  /*const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Ciudades');
-
-  lugares.forEach(categorias => {
-    console.log(categorias);
-  });*/
 
   return (
     <div className='listFilter'>
