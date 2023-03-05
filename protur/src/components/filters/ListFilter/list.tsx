@@ -35,7 +35,7 @@ export const List = (props:any) => {
     function cardsReturn(datos:any) {
         return (
             <li key={datos.id}>
-                <GridCard img={datos.Imagen} alt={datos.Nombre_del_Lugar} link={datos.url_destino} />
+                <GridCard img={datos.Imagen} img_small={datos.Image_small} alt={datos.Nombre_del_Lugar} link={datos.url_destino} />
             </li>
         )
     }

@@ -47,13 +47,13 @@ function GridCard(props:any) {
   return (
     <>
       <motion.div variants={descripcion} initial="visible" whileHover="rotated" animate={control} className="relative w-full h-full inset-0 mx-0 my-0">
-        <motion.img src={props.img} alt={props.alt} className="rounded-lg h-60 object-cover w-full drop-shadow-lg" />
+        <motion.img src={props.img_small} alt={props.alt} className="rounded-lg h-60 object-cover w-full drop-shadow-lg" />
         <motion.p variants={variantes} initial="hidden" whileHover="visible" onClick={handleClick} className="cursor-pointer backdrop-blur-sm absolute inset-0 justify-center items-center flex text-white bg-black/50 rounded-lg">{props.alt}</motion.p>
       </motion.div>
       
 
       {showPopup && (
-        <DownloadPopUp imgsrc={props.img} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc}/>
+        <DownloadPopUp imgsrc={props.img_small} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc}/>
       )}
     </>
   );

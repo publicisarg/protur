@@ -7,7 +7,8 @@ import blah from './blah.json'
 const categorias = ['Ciudades', 'Rutas', 'Pueblos', 'Naturaleza'];
 
 export const ListFilter = () => {
-  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Ciudades');
+    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Naturaleza");
+
   const [busqueda, setBusqueda] = useState('');
   const [isActive, setActive] = useState(false);
   const [animation, setAnimation] = useState({ showAppearClass: false, transiciones: true });
