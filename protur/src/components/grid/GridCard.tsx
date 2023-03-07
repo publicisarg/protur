@@ -53,7 +53,7 @@ function GridCard(props:any) {
       
 
       {showPopup && (
-        <DownloadPopUp imgsrc={props.img_small} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc}/>
+        <DownloadPopUp imgsrc={props.img} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc}/>
       )}
     </>
   );

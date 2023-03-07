@@ -4,23 +4,21 @@ import GridCard from '../../grid/GridCard';
 
 export const List = (props:any) => {
 
-    const [contenido, setLugares] = useState([]);
+    const [contenido, setContenido] = useState([]);
+    const [contenidoFiltrado, setContenidoFiltrado] = useState([]);
 
-    const [contenidoFiltrado, setContenidoFiltrado] = useState(
-        contenido.filter((item:any) => item.categoria === props.categoriaSeleccionada)
-    );
-    
     useEffect(() => {
         async function fetchData() {
           const response = await axios.get('https://desarrollodesitios0.site/crude/json.php');
-          setLugares(response.data);
+          setContenido(response.data);
         }
         fetchData();
-    }, []);
+    },[]);
 
     useEffect(() => {
-        setContenidoFiltrado(contenido.filter((item:any) => item.categoria === props.categoriaSeleccionada));
-    }, [props.categoriaSeleccionada]);
+        const filtrado = contenido.filter((item:any) => item.categoria === props.categoriaSeleccionada);
+        setContenidoFiltrado(filtrado);
+    }, [contenido, props.categoriaSeleccionada]);
 
     function cardsLoop(datos:any) {
         let cardsJSX = [];
@@ -54,4 +52,4 @@ export const List = (props:any) => {
     )
 }
 
-export default List
+export default List;
