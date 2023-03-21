@@ -42,7 +42,7 @@ export const List = (props:any) => {
         <>
             {props.categoriaSeleccionada && (
                 <ul
-                    className={`p-5 md:p-0 grid md:grid-cols-2 lg:grid-cols-3 gap-24 my-10 elementos`}>
+                    className={`p-5 md:p-0 grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-10 elementos`}>
                     {contenidoFiltrado.map((elemento:any, index:any) => (
                         cardsLoop(elemento)
                     ))}

@@ -11,9 +11,8 @@
 }
 
 .activo{
-background-color: #520BFF;
-border-color: #520BFF;
-color: #fff;
+background-color: #f4f4f4;
+color: #2a2b71;
 }
 button:focus, button:focus-visible {
   outline: 0px !important;

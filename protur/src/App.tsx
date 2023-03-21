@@ -1,12 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Footer } from './containers/footer'
-import { Header } from './containers/header'
 import { Main } from './containers/main'
-import goku from '../public/test.jpeg'
-import { Loading } from './pages/loading'
-import { Download } from './containers/download/normal'
-
 
 function App() {
 
@@ -17,10 +11,10 @@ function App() {
 
   return (
     <>
-      <Loading></Loading>
-      <Header></Header> 
+      {/*<Loading></Loading>*/}
+      {/*<Header></Header> */}
       <Main/>
-      <Footer></Footer>
+      {/*<Footer></Footer>*/}
      
     </>
   )

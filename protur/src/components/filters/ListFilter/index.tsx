@@ -46,7 +46,7 @@ export const ListFilter = () => {
     contenido.filter((item:any) => item.categoria === categoriaSeleccionada)
   );
 
-  useEffect(() => {
+/*  useEffect(() => {
     setAnimation({ showAppearClass: animation.showAppearClass, transiciones: true });
     setContenidoFiltrado(contenido.filter((item:any) => item.categoria === categoriaSeleccionada));
   }, [categoriaSeleccionada]);
@@ -55,15 +55,15 @@ export const ListFilter = () => {
     // Aparecer los elementos de la categoría "Ciudades" al iniciar la página
     setAnimation({ showAppearClass: true, transiciones: animation.transiciones });
     setContenidoFiltrado(contenido.filter((item:any) => item.categoria === categoriaSeleccionada));
-  }, []);
+  }, []);*/
 
   
   return (
     <div className='listFilter'>
-      <div className='grid px-5 md:p-0 grid-cols-2 lg:grid-cols-8 gap-6'>
+      <div className='grid px-5 md:p-0 grid-cols-2 lg:grid-cols-8 xl:grid-cols-10 gap-8'>
         {categorias.map((categoria) => (
           <button
-            className={`rounded-3xl border-solid border-[#CCCCCC] text-[#999999] bg-white ${
+            className={`rounded text-[#999999] bg-white lg:p-1 ${
               categoriaSeleccionada === categoria ? 'activo' : ''
             }`}
             key={categoria}
