@@ -74,7 +74,7 @@ export const ListFilter = () => {
           </button>
         ))}
         </div>
-        <select className='px-2 rounded text-[#999999]'>
+        <select className='pl-4 pr-8 py-2 rounded text-[#999999] border-neutral-400 border'>
           <option value="DEFAULT">Color</option>
           <option value="red">Rojo</option>
           <option value="blue">Azul</option>
