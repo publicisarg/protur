@@ -60,7 +60,8 @@ export const ListFilter = () => {
   
   return (
     <div className='listFilter'>
-      <div className='grid px-5 md:p-0 grid-cols-2 lg:grid-cols-8 xl:grid-cols-10 gap-8'>
+      <div className='flex px-5 md:p-0 gap-8 justify-between'>
+        <div className='flex justify-center items-center gap-12'>
         {categorias.map((categoria) => (
           <button
             className={`rounded text-[#999999] bg-white lg:p-1 ${
@@ -72,6 +73,14 @@ export const ListFilter = () => {
             {categoria}
           </button>
         ))}
+        </div>
+        <select className='px-2 rounded text-[#999999]'>
+          <option value="DEFAULT">Color</option>
+          <option value="red">Rojo</option>
+          <option value="blue">Azul</option>
+          <option value="gray">Gris</option>
+          <option value="white">Blanco</option>
+        </select>
       </div>
       <List contenido={contenidoFiltrado[0].elementos} categoriaSeleccionada={categoriaSeleccionada} />
   </div>)};

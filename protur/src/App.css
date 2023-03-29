@@ -45,3 +45,6 @@ button:focus, button:focus-visible {
   box-shadow: 0 5px 20px 5px #00000044;
 }
 
+input::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
