@@ -47,7 +47,7 @@ function GridCard(props: any) {
   return (
     <>
       <motion.div variants={descripcion} initial="visible" whileHover="rotated" animate={control} className="relative w-full h-full inset-0 mx-0 my-0">
-        <motion.img src={props.img_small} alt={props.alt} className="rounded h-60 object-cover w-full" />
+        <motion.img src={'https://desarrollodesitios0.site/protur/public/lugares/BUENOS_AIRES/small/' + props.img_small + '.jpg'} alt={props.alt} className="rounded h-60 object-cover w-full" />
         <motion.p variants={variantes} initial="hidden" whileHover="visible" onClick={handleClick} className="cursor-pointer backdrop-blur-sm absolute inset-0 justify-center items-center flex text-white bg-black/50 rounded">
           {props.alt}
         </motion.p>
