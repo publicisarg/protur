@@ -56,8 +56,8 @@ export const DownloadPopUp = (props: any) => {
           <motion.img variants={variantes} initial="hidden2" animate={control2} className="rounded-lg w-auto" src={props.imgsrc} />
           <div className="flex flex-col sm:flex-row justify-end w-full mt-6 gap-4 sm:gap-0">
             <div className="flex flex-col sm:flex-row gap-4">
-              <motion.a variants={variantes} initial="hidden3" animate={control3} onClick={handleDescarga}><IconButtomLeft name={"Descargar fondo"} /></motion.a>
-              <motion.a variants={variantes} initial="hidden3" animate={control3} href={props.linksrc}><IconButtomRightDark name={"Trabajar aquí"} /></motion.a>
+              <motion.a variants={variantes} initial="hidden3" animate={control3} onClick={handleDescarga}><IconButtomLeft name={"Download wallpaper"} /></motion.a>
+              <motion.a variants={variantes} initial="hidden3" animate={control3} href={props.linksrc}><IconButtomRightDark name={"Work here"} /></motion.a>
             </div>
           </div>
         </div>

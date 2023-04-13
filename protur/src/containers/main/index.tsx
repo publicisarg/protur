@@ -9,7 +9,7 @@ export const Main = () => {
         <img className='w-40' src={logoImg} />
       </div>
       <div className='mb-10 text-center text-[22px] md:text-[32px]'>
-        <p className='font-quicksandlight font-bold'>Encuentra un fondo de pantalla desde el que quieras trabajar</p>
+        <p className='font-quicksandlight font-bold'>Find a wallpaper you want to work from</p>
       </div>
       <Search />
       <div className='border-solid relative'>

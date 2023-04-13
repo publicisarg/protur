@@ -4,10 +4,10 @@ import List from './list';
 import axios from 'axios';
 import blah from './blah.json'
 
-const categorias = ['Ciudades', 'Rutas', 'Pueblos', 'Naturaleza'];
+const categorias = ['City', 'Routes', 'Towns', 'Nature'];
 
 export const ListFilter = () => {
-    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Naturaleza");
+    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Nature");
 
   const [busqueda, setBusqueda] = useState('');
   const [isActive, setActive] = useState(false);
@@ -76,10 +76,10 @@ export const ListFilter = () => {
         </div>
         <select className='pl-4 pr-8 py-2 rounded text-black border-neutral-400 border'>
           <option value="DEFAULT">Color</option>
-          <option value="red">Rojo</option>
-          <option value="blue">Azul</option>
-          <option value="gray">Gris</option>
-          <option value="white">Blanco</option>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="gray">Gray</option>
+          <option value="white">White</option>
         </select>
       </div>
       <List contenido={contenidoFiltrado[0].elementos} categoriaSeleccionada={categoriaSeleccionada} />
