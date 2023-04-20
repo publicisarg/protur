@@ -55,10 +55,10 @@ function GridCard(props: any) {
 
 
       {showPopup && (
-        <DownloadPopUp imgsrc={props.img} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc} />
+        <DownloadPopUp  imgsrc={'https://desarrollodesitios0.site/protur/public/lugares/'+ props.alt +'/large/' + props.img_small + '.jpg-large.jpg'}  imgdwn={'https://desarrollodesitios0.site/protur/public/lugares/'+ props.alt +'/large/' + props.img_small + '.jpg'} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc} />
       )}
     </>
-  );
+  )
 }
 
 export default GridCard;

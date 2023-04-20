@@ -7,7 +7,7 @@ export const DownloadPopUp = (props: any) => {
 
   const handleDescarga = () => {
     const descarga = document.createElement('a');
-    descarga.href = props.imgsrc;
+    descarga.href = props.imgdwn;
     descarga.download = 'Paisaje-Argentina.jpg';
     document.body.appendChild(descarga);
     descarga.click();
