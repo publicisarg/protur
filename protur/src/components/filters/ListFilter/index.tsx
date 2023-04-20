@@ -47,7 +47,9 @@ export const ListFilter = () => {
         <div className='sm:flex grid grid-cols-2 sm:justify-center items-center sm:gap-8 gap-6 flex-wrap justify-between w-full sm:w-auto sm:flex-row'>
         {categorias.map((categoria) => (
           <button
-            className={`rounded text-[#999999] text-sm bg-white md:px-4 py-2`}
+            className={`rounded text-[#999999] text-sm bg-white md:px-4 py-2 ${
+              categoriaSeleccionada == categoria ? 'activo' : ''
+            }`}
             key={categoria}
             onClick={() => handleCategoriaClick(categoria)}
           >
