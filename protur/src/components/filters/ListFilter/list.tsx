@@ -18,7 +18,7 @@ export const List = (props: any) => {
     useEffect(() => {
         const filtrado: any = contenido.filter((item: any) => item.categoria === props.categoriaSeleccionada);
         var filteredByColor;
-        const elementosFiltrados = Object.values(filtrado)[0].elementos;
+        const elementosFiltrados = Object.values<any>(filtrado)[0].elementos;
         if (props.colorSeleccionado != null && props.colorSeleccionado != "null") {
             filteredByColor = elementosFiltrados.filter((filteredElement: any) => filteredElement.colores.indexOf(props.colorSeleccionado) > -1);
         } else {
