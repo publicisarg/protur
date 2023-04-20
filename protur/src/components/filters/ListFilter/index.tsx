@@ -42,11 +42,16 @@ export const ListFilter = () => {
         </div>
         <select className='pl-4 pr-8 py-2 rounded text-black border-neutral-400 border' onChange={(event) => handleColor(event)}>
           <option value="null">Color</option>
-          <option value="Rojo">Rojo</option>
-          <option value="Azul">Azul</option>
-          <option value="Gris">Gris</option>
-          <option value="Blanco">Blanco</option>
-          <option value="Amarillo">Amarillo</option>
+          <option value="Black">Negro</option>
+          <option value="Blue">Azul</option>
+          <option value="Brown">Marron</option>
+          <option value="Green">Verde</option>
+          <option value="Gray">Gris</option>
+          <option value="Orange">Naranja</option>
+          <option value="Pink">Rosa</option>
+          <option value="Red">Rojo</option>
+          <option value="White">Blanco</option>
+          <option value="Yellow">Amarillo</option>
         </select>
       </div>
       <List categoriaSeleccionada={categoriaSeleccionada} colorSeleccionado={currentColor} />

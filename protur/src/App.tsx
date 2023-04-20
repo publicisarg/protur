@@ -1,14 +1,10 @@
-import { useState } from 'react'
 import './App.css'
 import { Main } from './containers/main'
 
 function App() {
-
-
   return (
     <>
       <Main/>
-     
     </>
   )
 }

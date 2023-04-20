@@ -10,29 +10,22 @@ export const List = (props: any) => {
     useEffect(() => {
         async function fetchData() {
             const response = await axios.get('https://desarrollodesitios0.site/crude/json.php');
-            console.log(response.data);
             setContenido(response.data);
         }
         fetchData();
     }, []);
 
     useEffect(() => {
-        const filtrado = contenido.filter((item: any) => item.categoria === props.categoriaSeleccionada);
+        const filtrado: any = contenido.filter((item: any) => item.categoria === props.categoriaSeleccionada);
         var filteredByColor;
+        const elementosFiltrados = Object.values(filtrado)[0].elementos;
         if (props.colorSeleccionado != null && props.colorSeleccionado != "null") {
-            //filteredByColor = filtrado.filter((filteredElement:any) => filteredElement.colores.indexOf(props.colorSeleccionado) > -1);
-            console.log("contenido");
-            console.log(contenido);
-            console.log("filtrado");
-            console.log(filtrado);
-          } else {
-            //filteredByColor = filtrado;
-            console.log(contenido);
-            console.log(filtrado);
-          }
-          filteredByColor = filtrado;
+            filteredByColor = elementosFiltrados.filter((filteredElement: any) => filteredElement.colores.indexOf(props.colorSeleccionado) > -1);
+        } else {
+            filteredByColor = elementosFiltrados;
+        }
         setContenidoFiltrado(filteredByColor);
-    }, [contenido, props.categoriaSeleccionada]);
+    }, [contenido, props.categoriaSeleccionada, props.colorSeleccionado]);
 
     function cardsLoop(datos: any) {
         let cardsJSX = [];
@@ -50,14 +43,23 @@ export const List = (props: any) => {
         )
     }
 
+    function cardsBuild(contenidoFiltrado: any) {
+        var cards: any = [];
+        contenidoFiltrado.forEach((element: { Imagen: any; Image_small: any; Nombre_del_Lugar: any; url_destino: any; }) => {
+
+            cards.push(<GridCard img={element.Imagen} img_small={element.Image_small} alt={element.Nombre_del_Lugar} link={element.url_destino} />);
+        });
+        return cards;
+    }
+
     return (
         <>
             {props.categoriaSeleccionada && (
                 <ul
                     className={`p-5 md:p-0 grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-10 elementos`}>
-                    {contenidoFiltrado.map((elemento: any, index: any) => (
-                        cardsLoop(elemento)
-                    ))}
+                    {
+                        cardsBuild(contenidoFiltrado)
+                    }
                 </ul>
             )}
         </>
