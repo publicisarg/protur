@@ -1,14 +1,11 @@
 import { SetStateAction, useEffect, useState } from 'react';
-import GridCard from '../../grid/GridCard';
 import List from './list';
-import axios from 'axios';
-import blah from './blah.json'
 
 const categorias = ['Towns', 'Gastronomy', 'Nature', 'Cities', 'Animals', 'Architecture', 'Arte', 'Handicrafts', 'People', ];
 
 export const ListFilter = () => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Towns");
-  const [currentColor, setCurrentColor] = useState(null);
+  const [currentColor, setCurrentColor] = useState("null");
   const [isActive, setActive] = useState(false);
   const [animation, setAnimation] = useState({ showAppearClass: false, transiciones: true });
 

@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import GridCard from '../../grid/GridCard';
+import Template  from "./template.json";
 
 export const List = (props: any) => {
 
-    const [contenido, setContenido] = useState([]);
+    const [contenido, setContenido] = useState(Template);
     const [contenidoFiltrado, setContenidoFiltrado] = useState([]);
 
     useEffect(() => {

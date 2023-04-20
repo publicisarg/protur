@@ -1,0 +1,19 @@
+[
+    {
+        "categoria": "Towns",
+        "elementos": [
+            {
+                "id": "NOT FOUND",
+                "Nombre_del_Lugar": "NOT FOUND",
+                "Imagen": "NOT FOUND",
+                "Image_small": "NOT FOUND",
+                "url_destino": "NOT FOUND",
+                "colores": [
+                    null,
+                    null,
+                    null
+                ]
+            }
+        ]
+    }
+]
