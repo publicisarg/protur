@@ -47,7 +47,7 @@ function GridCard(props: any) {
   return (
     <>
       <motion.div variants={descripcion} initial="visible" whileHover="rotated" animate={control} className="relative w-full h-full inset-0 mx-0 my-0">
-        <motion.img variants={variantes} initial="hidden" animate="visible" transition={{duration: 0.5, delay: props.delay}} src={'https://desarrollodesitios0.site/protur/public/lugares/'+ props.alt +'/small/' + props.img_small + '.jpg-small.jpg'} alt={props.alt} className="rounded h-60 object-cover w-full" />
+        <motion.img variants={variantes} initial="hidden" animate="visible" transition={{duration: 0.5, delay: props.delay}} src={'https://desarrollodesitios0.site/protur/public/lugares/'+ props.imgname +'/small/' + props.img_small + '.jpg-small.jpg'} alt={props.alt} className="rounded h-60 object-cover w-full" />
         <motion.p variants={variantes} initial="hidden" whileHover="visible" onClick={handleClick} className="cursor-pointer backdrop-blur-sm absolute inset-0 justify-center items-center flex text-white bg-black/50 rounded">
           {props.alt}
         </motion.p>
@@ -55,7 +55,7 @@ function GridCard(props: any) {
 
 
       {showPopup && (
-        <DownloadPopUp  imgsrc={'https://desarrollodesitios0.site/protur/public/lugares/'+ props.alt +'/large/' + props.img_small + '.jpg-large.jpg'}  imgdwn={'https://desarrollodesitios0.site/protur/public/lugares/'+ props.alt +'/large/' + props.img_small + '.jpg'} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc} />
+        <DownloadPopUp  imgsrc={'https://desarrollodesitios0.site/protur/public/lugares/'+ props.imgname +'/large/' + props.img_small + '.jpg-large.jpg'}  imgdwn={'https://desarrollodesitios0.site/protur/public/lugares/'+ props.imgname +'/large/' + props.img_small + '.jpg'} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc} />
       )}
     </>
   )
