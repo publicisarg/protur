@@ -43,7 +43,7 @@ export const ListFilter = () => {
           <option value="Blue">Blue</option>
           <option value="Brown">Brown</option>
           <option value="Green">Green</option>
-          <option value="Gray">Gray</option>
+          <option value="Grey">Grey</option>
           <option value="Orange">Orange</option>
           <option value="Pink">Pink</option>
           <option value="Red">Red</option>

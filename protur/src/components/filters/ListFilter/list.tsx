@@ -30,6 +30,7 @@ export const List = (props: any) => {
             }
         } else {
             filteredByColor = elementosFiltrados;
+            setFlex(false);
         }
         setContenidoFiltrado(filteredByColor);
     }, [contenido, props.categoriaSeleccionada, props.colorSeleccionado]);
