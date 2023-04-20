@@ -57,7 +57,7 @@ export const DownloadPopUp = (props: any) => {
           <div className="flex flex-col sm:flex-row justify-end w-full mt-6 gap-4 sm:gap-0">
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.a variants={variantes} initial="hidden3" animate={control3} onClick={handleDescarga}><IconButtomLeft name={"Download wallpaper"} /></motion.a>
-              <motion.a variants={variantes} initial="hidden3" animate={control3} href={props.linksrc}><IconButtomRightDark name={"Work here"} /></motion.a>
+              <motion.a variants={variantes} initial="hidden3" animate={control3} href={props.linksrc} target='_blank'><IconButtomRightDark name={"Work here"} /></motion.a>
             </div>
           </div>
         </div>
