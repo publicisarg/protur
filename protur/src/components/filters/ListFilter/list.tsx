@@ -1,12 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import GridCard from '../../grid/GridCard';
-import Template  from "./template.json";
+import Template from "./template.json";
 
 export const List = (props: any) => {
 
     const [contenido, setContenido] = useState(Template);
     const [contenidoFiltrado, setContenidoFiltrado] = useState([]);
+    const [isFlex, setFlex] = useState(false);
 
     useEffect(() => {
         async function fetchData() {
@@ -22,42 +23,45 @@ export const List = (props: any) => {
         const elementosFiltrados = Object.values<any>(filtrado)[0].elementos;
         if (props.colorSeleccionado != null && props.colorSeleccionado != "null") {
             filteredByColor = elementosFiltrados.filter((filteredElement: any) => filteredElement.colores.indexOf(props.colorSeleccionado) > -1);
+            if (filteredByColor.length == 0) {
+                setFlex(true);
+            } else {
+                setFlex(false);
+            }
         } else {
             filteredByColor = elementosFiltrados;
         }
         setContenidoFiltrado(filteredByColor);
     }, [contenido, props.categoriaSeleccionada, props.colorSeleccionado]);
 
-    function cardsLoop(datos: any) {
-        let cardsJSX = [];
-        for (var i = 0; i < datos.elementos.length; i++) {
-            cardsJSX.push(cardsReturn(datos.elementos[i]));
-        }
-        return cardsJSX;
-    }
-
-    function cardsReturn(datos: any) {
-        return (
-            <li key={datos.id}>
-                <GridCard img={datos.Imagen} img_small={datos.Image_small} alt={datos.Nombre_del_Lugar} link={datos.url_destino} />
-            </li>
-        )
-    }
-
     function cardsBuild(contenidoFiltrado: any) {
         var cards: any = [];
-        contenidoFiltrado.forEach((element: { Imagen: any; Image_small: any; Nombre_del_Lugar: any; url_destino: any; }) => {
-
-            cards.push(<GridCard img={element.Imagen} img_small={element.Image_small} alt={element.Nombre_del_Lugar} link={element.url_destino} />);
-        });
-        return cards;
+        if (contenidoFiltrado.length > 0) {
+            contenidoFiltrado.forEach((element: { Imagen: any; Image_small: any; Nombre_del_Lugar: any; url_destino: any; }, index: any) => {
+                if (element.Nombre_del_Lugar != "NOT FOUND") {
+                    cards.push(<GridCard img={element.Imagen} img_small={element.Image_small} alt={element.Nombre_del_Lugar} link={element.url_destino} delay={index / 10} key={index} />);
+                }
+            });
+            return cards;
+        } else {
+            return (
+                <div className="flex flex-col justify-center items-center">
+                    <h3 className="text-3xl">
+                        No wallpapers found :(
+                    </h3>
+                    <p className="text-xl mt-6">
+                        Try to use different filters.
+                    </p>
+                </div>
+            )
+        }
     }
 
     return (
         <>
             {props.categoriaSeleccionada && (
                 <ul
-                    className={`p-5 md:p-0 grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-10 elementos`}>
+                    className={`${isFlex ? "flex justify-center items-center" : "grid"} p-5 md:p-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-10 elementos`}>
                     {
                         cardsBuild(contenidoFiltrado)
                     }

@@ -9,9 +9,208 @@
                 "Image_small": "NOT FOUND",
                 "url_destino": "NOT FOUND",
                 "colores": [
-                    null,
-                    null,
-                    null
+                    "Black",
+                    "Blue",
+                    "Brown",
+                    "Green",
+                    "Gray",
+                    "Orange",
+                    "Pink",
+                    "Red",
+                    "White",
+                    "Yellow"
+                ]
+            }
+        ]
+    },
+    {
+        "categoria": "Gastronomy",
+        "elementos": [
+            {
+                "id": "NOT FOUND",
+                "Nombre_del_Lugar": "NOT FOUND",
+                "Imagen": "NOT FOUND",
+                "Image_small": "NOT FOUND",
+                "url_destino": "NOT FOUND",
+                "colores": [
+                    "Black",
+                    "Blue",
+                    "Brown",
+                    "Green",
+                    "Gray",
+                    "Orange",
+                    "Pink",
+                    "Red",
+                    "White",
+                    "Yellow"
+                ]
+            }
+        ]
+    },
+    {
+        "categoria": "Nature",
+        "elementos": [
+            {
+                "id": "NOT FOUND",
+                "Nombre_del_Lugar": "NOT FOUND",
+                "Imagen": "NOT FOUND",
+                "Image_small": "NOT FOUND",
+                "url_destino": "NOT FOUND",
+                "colores": [
+                    "Black",
+                    "Blue",
+                    "Brown",
+                    "Green",
+                    "Gray",
+                    "Orange",
+                    "Pink",
+                    "Red",
+                    "White",
+                    "Yellow"
+                ]
+            }
+        ]
+    },
+    {
+        "categoria": "Cities",
+        "elementos": [
+            {
+                "id": "NOT FOUND",
+                "Nombre_del_Lugar": "NOT FOUND",
+                "Imagen": "NOT FOUND",
+                "Image_small": "NOT FOUND",
+                "url_destino": "NOT FOUND",
+                "colores": [
+                    "Black",
+                    "Blue",
+                    "Brown",
+                    "Green",
+                    "Gray",
+                    "Orange",
+                    "Pink",
+                    "Red",
+                    "White",
+                    "Yellow"
+                ]
+            }
+        ]
+    },
+    {
+        "categoria": "Animals",
+        "elementos": [
+            {
+                "id": "NOT FOUND",
+                "Nombre_del_Lugar": "NOT FOUND",
+                "Imagen": "NOT FOUND",
+                "Image_small": "NOT FOUND",
+                "url_destino": "NOT FOUND",
+                "colores": [
+                    "Black",
+                    "Blue",
+                    "Brown",
+                    "Green",
+                    "Gray",
+                    "Orange",
+                    "Pink",
+                    "Red",
+                    "White",
+                    "Yellow"
+                ]
+            }
+        ]
+    },
+    {
+        "categoria": "Architecture",
+        "elementos": [
+            {
+                "id": "NOT FOUND",
+                "Nombre_del_Lugar": "NOT FOUND",
+                "Imagen": "NOT FOUND",
+                "Image_small": "NOT FOUND",
+                "url_destino": "NOT FOUND",
+                "colores": [
+                    "Black",
+                    "Blue",
+                    "Brown",
+                    "Green",
+                    "Gray",
+                    "Orange",
+                    "Pink",
+                    "Red",
+                    "White",
+                    "Yellow"
+                ]
+            }
+        ]
+    },
+    {
+        "categoria": "Arte",
+        "elementos": [
+            {
+                "id": "NOT FOUND",
+                "Nombre_del_Lugar": "NOT FOUND",
+                "Imagen": "NOT FOUND",
+                "Image_small": "NOT FOUND",
+                "url_destino": "NOT FOUND",
+                "colores": [
+                    "Black",
+                    "Blue",
+                    "Brown",
+                    "Green",
+                    "Gray",
+                    "Orange",
+                    "Pink",
+                    "Red",
+                    "White",
+                    "Yellow"
+                ]
+            }
+        ]
+    },
+    {
+        "categoria": "Handicrafts",
+        "elementos": [
+            {
+                "id": "NOT FOUND",
+                "Nombre_del_Lugar": "NOT FOUND",
+                "Imagen": "NOT FOUND",
+                "Image_small": "NOT FOUND",
+                "url_destino": "NOT FOUND",
+                "colores": [
+                    "Black",
+                    "Blue",
+                    "Brown",
+                    "Green",
+                    "Gray",
+                    "Orange",
+                    "Pink",
+                    "Red",
+                    "White",
+                    "Yellow"
+                ]
+            }
+        ]
+    },
+    {
+        "categoria": "People",
+        "elementos": [
+            {
+                "id": "NOT FOUND",
+                "Nombre_del_Lugar": "NOT FOUND",
+                "Imagen": "NOT FOUND",
+                "Image_small": "NOT FOUND",
+                "url_destino": "NOT FOUND",
+                "colores": [
+                    "Black",
+                    "Blue",
+                    "Brown",
+                    "Green",
+                    "Gray",
+                    "Orange",
+                    "Pink",
+                    "Red",
+                    "White",
+                    "Yellow"
                 ]
             }
         ]
