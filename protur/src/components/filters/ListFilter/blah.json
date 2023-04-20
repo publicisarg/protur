@@ -1,81 +1,13 @@
 [
     {
-        "categoria": "Ciudades",
+        "categoria": "CATEGORIA",
         "elementos": [
             {
-                "id": "7",
-                "Nombre_del_Lugar": "PLAYA",
-                "Imagen": "https:\/\/desarrollodesitios0.site\/protur\/public\/lugares\/03.jpg",
-                "url_destino": "#"
-            },
-            {
-                "id": "8",
-                "Nombre_del_Lugar": "Avellaneda",
-                "Imagen": "https:\/\/desarrollodesitios0.site\/protur\/public\/lugares\/03.jpg",
-                "url_destino": "#"
-            },
-            {
-                "id": "15",
-                "Nombre_del_Lugar": "VOS",
-                "Imagen": "https:\/\/desarrollodesitios0.site\/protur\/public\/lugares\/03.jpg",
-                "url_destino": "#"
-            },
-            {
-                "id": "16",
-                "Nombre_del_Lugar": "QUE TI",
-                "Imagen": "https:\/\/desarrollodesitios0.site\/protur\/public\/lugares\/03.jpg",
-                "url_destino": "#"
-            }
-        ]
-    },
-    {
-        "categoria": "Rutas",
-        "elementos": [
-            {
-                "id": "9",
-                "Nombre_del_Lugar": "TU VIEJA",
-                "Imagen": "https:\/\/desarrollodesitios0.site\/protur\/public\/lugares\/03.jpg",
-                "url_destino": "#"
-            },
-            {
-                "id": "10",
-                "Nombre_del_Lugar": "TU HERMANA",
-                "Imagen": "https:\/\/desarrollodesitios0.site\/protur\/public\/lugares\/03.jpg",
-                "url_destino": "#"
-            }
-        ]
-    },
-    {
-        "categoria": "Pueblos",
-        "elementos": [
-            {
-                "id": "11",
-                "Nombre_del_Lugar": "TU ABUELA",
-                "Imagen": "https:\/\/desarrollodesitios0.site\/protur\/public\/lugares\/03.jpg",
-                "url_destino": "#"
-            },
-            {
-                "id": "12",
-                "Nombre_del_Lugar": "TU PRIMA",
-                "Imagen": "https:\/\/desarrollodesitios0.site\/protur\/public\/lugares\/03.jpg",
-                "url_destino": "#"
-            }
-        ]
-    },
-    {
-        "categoria": "Naturaleza",
-        "elementos": [
-            {
-                "id": "13",
-                "Nombre_del_Lugar": "TU TIA",
-                "Imagen": "https:\/\/desarrollodesitios0.site\/protur\/public\/lugares\/03.jpg",
-                "url_destino": "#"
-            },
-            {
-                "id": "14",
-                "Nombre_del_Lugar": "TU AMIGA",
-                "Imagen": "https:\/\/desarrollodesitios0.site\/protur\/public\/lugares\/03.jpg",
-                "url_destino": "#"
+                "id": "0",
+                "Nombre_del_Lugar": "NOMBRE",
+                "Imagen": "URL",
+                "url_destino": "WEB",
+                "colores": ["COLOR", "COLOR", "COLOR"]
             }
         ]
     }

@@ -8,38 +8,21 @@ const categorias = ['Towns', 'Gastronomy', 'Nature', 'Cities', 'Animals', 'Archi
 
 export const ListFilter = () => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Towns");
-  const [busqueda, setBusqueda] = useState('');
+  const [currentColor, setCurrentColor] = useState(null);
   const [isActive, setActive] = useState(false);
   const [animation, setAnimation] = useState({ showAppearClass: false, transiciones: true });
-  const [lugares, setLugares] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const response = await axios.get('https://desarrollodesitios0.site/crude/json.php');
-      setLugares(response.data);
-    }
-    fetchData();
-  }, []);
-
-  const contenido = blah;
 
   const handleCategoriaClick = (categoria: SetStateAction<string>) => {
     setCategoriaSeleccionada(categoria);
     setActive(!isActive);
 
     setAnimation({ showAppearClass: false, transiciones: animation.transiciones });
-
-    setTimeout(() => {
-      const filteredElements = contenido.filter((element) => element.categoria === categoria);
-      setContenidoFiltrado(filteredElements);
-      setAnimation({ showAppearClass: true, transiciones: animation.transiciones });
-    }, 500);
   };
 
-  const [contenidoFiltrado, setContenidoFiltrado] = useState(
-    contenido.filter((item) => item.categoria === categoriaSeleccionada)
-  );
-
+  function handleColor(event:any) {
+    setCurrentColor(event.target.value);
+    console.log(event.target.value);
+  }
 
   return (
     <div className='listFilter'>
@@ -57,15 +40,16 @@ export const ListFilter = () => {
           </button>
         ))}
         </div>
-        <select className='pl-4 pr-8 py-2 rounded text-black border-neutral-400 border'>
-          <option value="DEFAULT">Color</option>
-          <option value="red">Rojo</option>
-          <option value="blue">Azul</option>
-          <option value="gray">Gris</option>
-          <option value="white">Blanco</option>
+        <select className='pl-4 pr-8 py-2 rounded text-black border-neutral-400 border' onChange={(event) => handleColor(event)}>
+          <option value="null">Color</option>
+          <option value="Rojo">Rojo</option>
+          <option value="Azul">Azul</option>
+          <option value="Gris">Gris</option>
+          <option value="Blanco">Blanco</option>
+          <option value="Amarillo">Amarillo</option>
         </select>
       </div>
-      <List contenido={contenidoFiltrado[0]?.elementos || []} categoriaSeleccionada={categoriaSeleccionada} />
+      <List categoriaSeleccionada={categoriaSeleccionada} colorSeleccionado={currentColor} />
   </div>);
 };
 
