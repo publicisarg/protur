@@ -12,15 +12,15 @@ export const Standarbuttom = (props: { name: string | number | boolean | ReactEl
 }
 
 export const IconButtomLeft = (props: { name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined }) => {
-  return <span className={`flex justify-center w-full md:w-auto gap-2 items-center rounded border-2 border-[#2a2b71] text-[#2a2b71] bg-transparent font-quicksandlight font-bold  p-4`}><LinkBottom color="#333" size="18px"/>{props.name} </span>;
+  return <span className={`flex justify-center w-full md:w-auto gap-2 items-center rounded border-2 border-[#2a2b71] text-[#2a2b71] bg-white font-quicksandlight font-bold p-4 cursor-pointer`}><LinkBottom color="#333" size="18px"/>{props.name} </span>;
 
   
 }
 export const IconButtomRight = (props: { name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined }) => {
-  return <span className={`flex justify-center w-full md:w-auto gap-2 items-center rounded text-[#333] bg-[#f4f4f4] font-quicksandlight font-bold`}><LinkPrevious color="#333" size="18px"/>{props.name}</span>;
+  return <span className={`flex justify-center w-full md:w-auto gap-2 items-center rounded text-[#333] bg-[#f4f4f4] font-quicksandlight font-bold cursor-pointer`}><LinkPrevious color="#333" size="18px"/>{props.name}</span>;
 }
 export const IconButtomRightDark = (props: { name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined }) => {
-  return <span className={`flex justify-center w-full h-full md:w-auto gap-2 items-center rounded text-[#fff] border-2 bg-[#2a2b71] font-quicksandlight font-bold p-4`}><Briefcase color="#FFF" size="18px"/>{props.name}</span>;
+  return <span className={`flex justify-center w-full md:w-auto gap-2 items-center rounded border-2 text-[#fff]  border-[#2a2b71] bg-[#2a2b71] font-quicksandlight font-bold p-4 cursor-pointer`}><Briefcase color="#FFF" size="18px"/>{props.name}</span>;
 }
 
 

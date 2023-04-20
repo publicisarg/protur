@@ -39,28 +39,34 @@ export const DownloadPopUp = (props: any) => {
   });
 
   const variantes = {
-    visible: { opacity: 1, transition:{duration: 0.25}, x: 0, y: 0},
-    visible1: { opacity: 1, transition:{duration: 1}, x: 0, y: 0},
-    visible2: { opacity: 1, scale: 1, transition:{duration: 0.5}, x: 0, y: 0},
-    visible3: { opacity: 1, transition:{duration: 1}, x: 0, y: 0},
-    hidden: {opacity: 0, transition:{duration: 0.5}},
-    hidden1: { opacity: 0, y: -100, transition:{duration: 1} },
-    hidden2: { opacity: 0, scale: 0, transition:{duration: 0.5} },
-    hidden3: { opacity: 0, y: 100, transition:{duration: 1} }
+    visible: { opacity: 1, transition: { duration: 0.25 }, x: 0, y: 0 },
+    visible1: { opacity: 1, transition: { duration: 1 }, x: 0, y: 0 },
+    visible2: { opacity: 1, scale: 1, transition: { duration: 0.5 }, x: 0, y: 0 },
+    visible3: { opacity: 1, transition: { duration: 1 }, x: 0, y: 0 },
+    hidden: { opacity: 0, transition: { duration: 0.5 } },
+    hidden1: { opacity: 0, y: -100, transition: { duration: 1 } },
+    hidden2: { opacity: 0, scale: 0, transition: { duration: 0.5 } },
+    hidden3: { opacity: 0, y: 100, transition: { duration: 1 } }
   }
 
-    return ( 
-      <motion.div variants={variantes} initial="hidden" animate={control} className="popup h-[100vh] grid justify-items-center items-center overflow-hidden fixed top-0 left-0 right-0 z-50 bg-white">
-        <div className="container px-12 py-8 rounded-lg flex flex-col z-50 justify-center items-start bg-transparent max-w-screen-lg">
-          <motion.img variants={variantes} initial="hidden1" animate={control1} src={logo} onClick={handleClose} className="pb-6 w-36 cursor-pointer" />
+  return (
+    <motion.div variants={variantes} initial="hidden" animate={control} className="popup h-[100vh] grid justify-items-center items-center overflow-hidden fixed top-0 left-0 right-0 z-50 bg-white">
+      <div className="container px-12 py-8 rounded-lg flex flex-col z-50 justify-center items-start bg-transparent max-w-screen-lg">
+        <motion.img variants={variantes} initial="hidden1" animate={control1} src={logo} onClick={handleClose} className="pb-6 w-36 cursor-pointer" />
+        <div className='relative'>
           <motion.img variants={variantes} initial="hidden2" animate={control2} className="rounded-lg w-auto" src={props.imgsrc} />
-          <div className="flex flex-col sm:flex-row justify-end w-full mt-6 gap-4 sm:gap-0">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <motion.a variants={variantes} initial="hidden3" animate={control3} onClick={handleDescarga}><IconButtomLeft name={"Download wallpaper"} /></motion.a>
-              <motion.a variants={variantes} initial="hidden3" animate={control3} href={props.linksrc} target='_blank'><IconButtomRightDark name={"Work here"} /></motion.a>
-            </div>
+          <motion.div variants={variantes} initial="hidden" whileHover="visible" className='absolute w-full h-full inset-0 flex justify-center items-center gap-4 bg-black/30 rounded-lg'>
+            <a onClick={handleDescarga}><IconButtomLeft name={"Download wallpaper"} /></a>
+            <a href={props.linksrc} target='_blank'><IconButtomRightDark name={"Work here"} /></a>
+          </motion.div>
+        </div>
+        <div className="flex flex-col sm:flex-row justify-end w-full mt-6 gap-4 sm:gap-0">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <motion.a variants={variantes} initial="hidden3" animate={control3} onClick={handleDescarga}><IconButtomLeft name={"Download wallpaper"} /></motion.a>
+            <motion.a variants={variantes} initial="hidden3" animate={control3} href={props.linksrc} target='_blank'><IconButtomRightDark name={"Work here"} /></motion.a>
           </div>
         </div>
-      </motion.div>
-    )
+      </div>
+    </motion.div>
+  )
 }
