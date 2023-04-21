@@ -1,13 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: 'quicksandlight';
-  src: url('quicksand-variablefont_wght-webfont.woff2') format('woff2'),
-       url('quicksand-variablefont_wght-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 
+@font-face {
+  font-family: MyriadPro;
+  src: url('MyriadPro-Regular.otf');
+}
+
+.font-myriadpro {
+  font-family: 'MyriadPro', Arial, Helvetica, sans-serif;
 }
 
 .activo{
@@ -47,4 +48,10 @@ button:focus, button:focus-visible {
 
 input::-webkit-calendar-picker-indicator {
   display: none !important;
+}
+
+@media (max-height: 850px) and (orientation: landscape) {
+  .auxheightcorrection {
+    height: 50vh !important;
+  }
 }

@@ -1,4 +1,9 @@
 
+@media (max-width: 1200) and (orientation: landscape) {
+  .auxheightcorrection {
+    height: 100px !important;
+  }
+}
 
 
 body {

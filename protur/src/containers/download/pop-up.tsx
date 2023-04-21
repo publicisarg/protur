@@ -50,14 +50,21 @@ export const DownloadPopUp = (props: any) => {
   }
 
   return (
-    <motion.div variants={variantes} initial="hidden" animate={control} className="popup h-[100vh] grid justify-items-center items-center overflow-hidden fixed top-0 left-0 right-0 z-50 bg-white">
-      <div className="container px-12 py-8 rounded-lg flex flex-col z-50 justify-center items-start bg-transparent max-w-screen-lg">
-        <motion.img variants={variantes} initial="hidden1" animate={control1} src={logo} onClick={handleClose} className="pb-6 w-36 cursor-pointer" />
+    <>
+      <div className="popup h-[100vh] grid justify-items-center items-center overflow-hidden fixed top-0 left-0 right-0 z-50 bg-white">
+        MAQUETA
+      </div>
+
+     {/* <motion.div variants={variantes} initial="hidden" animate={control} className="popup h-[100vh] grid justify-items-center items-center overflow-hidden fixed top-0 left-0 right-0 z-50 bg-white">
+      <div className="container px-12 py-8 rounded-lg flex flex-col z-50 justify-center items-center bg-transparent max-w-screen-lg">
+        <div className='w-full flex justify-start items-start'>
+        LOGO  <motion.img variants={variantes} initial="hidden1" animate={control1} src={logo} onClick={handleClose} className="pb-6 w-36 cursor-pointer" />
+        </div>
         <div className='relative'>
-          <motion.img variants={variantes} initial="hidden2" animate={control2} className="rounded-lg w-auto" src={props.imgsrc} />
+        IMAGEN DE FONDO  <motion.img variants={variantes} initial="hidden2" animate={control2} className="rounded-lg w-auto auxheightcorrection" src={props.imgsrc} />
           <motion.div variants={variantes} initial="hidden" whileHover="visible" className='absolute w-full h-full inset-0 flex justify-center items-center gap-4 bg-black/30 rounded-lg'>
             <a onClick={handleDescarga}><IconButtomLeft name={"Download wallpaper"} /></a>
-            <a href={props.linksrc} target='_blank'><IconButtomRightDark name={"Work here"} /></a>
+          BOTON DE TRABAJO  <a href={props.linksrc} target='_blank'><IconButtomRightDark name={"Work here"} /></a>
           </motion.div>
         </div>
         <div className="flex flex-col sm:flex-row justify-end w-full mt-6 gap-4 sm:gap-0">
@@ -67,6 +74,7 @@ export const DownloadPopUp = (props: any) => {
           </div>
         </div>
       </div>
-    </motion.div>
+  </motion.div>*/}
+    </>
   )
 }
