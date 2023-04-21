@@ -97,7 +97,7 @@ export const DownloadPopUp = (props: any) => {
         <div className='flex flex-col justify-start items-center h-full w-full'>
           <div className='flex flex-row justify-around items-center w-full'>
             <motion.img variants={variantes} initial="hidden1" animate={control1} src={logo} onClick={handleClose} className="my-6 w-32 cursor-pointer" />
-            <motion.img variants={variantes} initial="hidden1" animate={control1} src={logovisit} onClick={handleClose} className="my-6 w-32 cursor-pointer" />
+            <motion.img variants={variantes} initial="hidden1" animate={control1} src={logovisit} className="my-6 w-32 cursor-pointer" />
           </div>
           <motion.div variants={variantes} initial="hidden2" animate={control2} className='h-3/4 w-full bg-cover bg-center bg-no-repeat relative' style={{ backgroundImage: 'url("' + props.imgdwn + '")' }}>
             <div className="w-full h-full flex justify-center items-center flex-col gap-12 backdrop-brightness-50">
