@@ -51,7 +51,7 @@ function GridCard(props: any) {
       </motion.div>
 
       {showPopup && (
-        <DownloadPopUp  imgsrc={'https://desarrollodesitios0.site/protur/public/lugares/'+ props.imgname +'/large/' + props.img_small + '.jpg-large.jpg'}  imgdwn={'https://desarrollodesitios0.site/protur/public/lugares/'+ props.imgname +'/large/' + props.img_small + '.jpg'} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc} alt={props.alt}/>
+        <DownloadPopUp imgsrc={'https://desarrollodesitios0.site/protur/public/lugares/'+ props.imgname +'/large/' + props.img_small + '.jpg-large.jpg'}  imgdwn={'https://desarrollodesitios0.site/protur/public/lugares/'+ props.imgname +'/large/' + props.img_small + '.jpg'} img={props.alt} handleFunc={handleDescarga} setShowPopup={setShowPopup} linksrc={props.linksrc} alt={props.alt}/>
       )}
     </>
   )
