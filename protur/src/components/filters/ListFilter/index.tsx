@@ -1,7 +1,7 @@
 import { SetStateAction, useEffect, useState } from 'react';
 import List from './list';
 
-const categorias = ['Towns', 'Gastronomy', 'Nature', 'Cities', 'Animals', 'Architecture', 'Arte', 'Handicrafts', 'People', ];
+const categorias = ['Towns', 'Gastronomy', 'Nature', 'Cities', 'Animals', 'Architecture', 'Art', 'Handicrafts', 'People', ];
 
 export const ListFilter = () => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Towns");
