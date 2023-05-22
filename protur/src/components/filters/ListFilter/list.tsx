@@ -42,7 +42,7 @@ export const List = (props: any) => {
                 Display_url: string; Imagen: any; Image_small: any; Nombre_del_Lugar: any; url_destino: any; Display_name: any
             }, index: any) => {
                 if (element.Nombre_del_Lugar != "NOT FOUND") {
-                    cards.push(<GridCard img={element.Imagen} img_small={element.Image_small} alt={element.Display_name} imgname={element.Nombre_del_Lugar} linksrc={"https://arg-travel-staging.netlify.app/" + element.Display_url} delay={index / 10} key={index} />);
+                    cards.push(<GridCard img={element.Imagen} img_small={element.Image_small} alt={element.Display_name} imgname={element.Nombre_del_Lugar} linksrc={element.Display_url} delay={index / 10} key={index} />);
                 }
             });
             return cards;
