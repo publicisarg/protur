@@ -3,7 +3,7 @@ import List from './list';
 
 const categorias = ['Towns', 'Gastronomy', 'Nature', 'Cities', 'Animals', 'Architecture', 'Art', 'Handicrafts', 'People', ];
 
-export const ListFilter = () => {
+export const ListFilter = (props:any) => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Towns");
   const [currentColor, setCurrentColor] = useState("null");
   const [isActive, setActive] = useState(false);
@@ -12,13 +12,11 @@ export const ListFilter = () => {
   const handleCategoriaClick = (categoria: SetStateAction<string>) => {
     setCategoriaSeleccionada(categoria);
     setActive(!isActive);
-
     setAnimation({ showAppearClass: false, transiciones: animation.transiciones });
   };
 
   function handleColor(event:any) {
     setCurrentColor(event.target.value);
-    console.log(event.target.value);
   }
 
   return (
@@ -51,7 +49,7 @@ export const ListFilter = () => {
           <option value="Yellow">Yellow</option>
         </select>
       </div>
-      <List categoriaSeleccionada={categoriaSeleccionada} colorSeleccionado={currentColor} />
+      <List categoriaSeleccionada={categoriaSeleccionada} colorSeleccionado={currentColor} keywordSeleccionada={props.keywordSeleccionada}/>
   </div>);
 };
 

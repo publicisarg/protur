@@ -1,8 +1,12 @@
 import { ListFilter } from '../../components/filters/ListFilter'
 import { Search } from '../../components/filters/search'
 import logoImg from '../../../public/logoblack.svg'
+import { useEffect, useState } from 'react'
 
 export const Main = () => {
+
+  const [keyword, setKeyword] = useState("");
+
   return (
     <div className='container mx-auto items-center'>
       <div className="my-5 w-full inset-0 flex justify-center items-center">
@@ -11,9 +15,9 @@ export const Main = () => {
       <div className='mb-10 text-center text-[22px] md:text-[32px]'>
         <p className='font-myriadpro'>Find a wallpaper you want to work from</p>
       </div>
-      <Search />
+      <Search setKeyword={setKeyword}/>
       <div className='border-solid relative'>
-        <ListFilter />
+        <ListFilter keywordSeleccionada={keyword}/>
       </div>
     </div>
   )

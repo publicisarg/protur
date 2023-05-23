@@ -7,7 +7,9 @@ export const List = (props: any) => {
 
     const [contenido, setContenido] = useState(Template);
     const [contenidoFiltrado, setContenidoFiltrado] = useState([]);
+    const [contenidoFiltradoPorKey, setContenidoFiltradoPorKey] = useState([]);
     const [isFlex, setFlex] = useState(false);
+    const [usingKeywords, isUsingKeywords] = useState(false);
 
     useEffect(() => {
         async function fetchData() {
@@ -60,14 +62,37 @@ export const List = (props: any) => {
         }
     }
 
+    useEffect(() => {
+        if (props.keywordSeleccionada != "") {
+            var auxContent: any = [];
+            contenido.forEach(cat => {
+                cat.elementos.forEach(element => {
+                    element.keywords.split(',').forEach((keyword: any) => {
+                        if (keyword.toUpperCase() == props.keywordSeleccionada.toUpperCase()) {
+                            auxContent.push(element);
+                        }
+                    })
+                });
+            });
+            if (auxContent.length > 0) {
+                isUsingKeywords(true);
+                setContenidoFiltradoPorKey(auxContent);
+            } else {
+                isUsingKeywords(false);
+                setContenidoFiltradoPorKey([]);
+            }
+        }
+    }, [props.keywordSeleccionada])
+
+
+
     return (
         <>
             {props.categoriaSeleccionada && (
                 <ul
                     className={`${isFlex ? "flex justify-center items-center" : "grid"} p-5 md:p-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-10 elementos`}>
-                    {
-                        cardsBuild(contenidoFiltrado)
-                    }
+                    {!usingKeywords && cardsBuild(contenidoFiltrado)}
+                    {usingKeywords && cardsBuild(contenidoFiltradoPorKey)}
                 </ul>
             )}
         </>
