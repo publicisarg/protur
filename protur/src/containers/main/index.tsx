@@ -15,7 +15,7 @@ export const Main = () => {
       <div className='mb-10 text-center text-[22px] md:text-[32px]'>
         <p className='font-myriadpro'>Find a wallpaper you want to work from</p>
       </div>
-      <Search setKeyword={setKeyword}/>
+      {false && <Search setKeyword={setKeyword}/>}
       <div className='border-solid relative'>
         <ListFilter keywordSeleccionada={keyword}/>
       </div>
