@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 export const Main = () => {
 
   const [keyword, setKeyword] = useState("");
+  const [clickLogo, setClickLogo] = useState(false);
 
   return (
     <div className='container mx-auto items-center'>
@@ -17,7 +18,7 @@ export const Main = () => {
       </div>
       {false && <Search setKeyword={setKeyword}/>}
       <div className='border-solid relative'>
-        <ListFilter keywordSeleccionada={keyword}/>
+        <ListFilter setClickLogo={setClickLogo} clickLogo={clickLogo} keywordSeleccionada={keyword}/>
       </div>
     </div>
   )
