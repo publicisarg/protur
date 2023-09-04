@@ -104,7 +104,7 @@ export const DownloadPopUp = (props: any) => {
                 <h3 className='text-white text-5xl font-myriadpro border-t-4 border-b-4 border-white py-3 px-12'>{props.alt}</h3>
                 <p className='text-white text-2xl font-myriadpro'>Argentina</p>
               </div>
-              <a href={props.linksrc} target='_blank'>
+              <a href={props.lang == "en" ? "https://argentina.travel/en/" + props.linksrc : "https://argentina.travel/" + props.linksrc} target='_blank'>
                 <span className="text-white px-6 pt-3 pb-2 text-lg font-myriadpro rounded bg-[#2F2B83] cursor-pointer">{props.lang == "en" ? "Get more info!" : "Ver mas información!"}</span>
               </a>
             </div>

@@ -13,6 +13,7 @@ export const ListFilter = (props: any) => {
 
   useEffect(() => {
     if (props.lang != "en") {
+      console.log(props.lang);
       setCategorias(
         [
           { value: 'Towns', display: "Pueblos" },
@@ -20,6 +21,14 @@ export const ListFilter = (props: any) => {
           { value: 'Cities', display: "Ciudades" }
         ]
       );
+    } else {
+      setCategorias(
+        [
+          { value: 'Towns', display: "Towns" },
+          { value: 'Nature', display: "Nature" },
+          { value: 'Cities', display: "Cities" }
+        ]
+      )
     }
   }, [])
 
