@@ -22,7 +22,12 @@ export const List = (props: any) => {
     useEffect(() => {
         const filtrado: any = contenido.filter((item: any) => item.categoria === props.categoriaSeleccionada);
         var filteredByColor;
-        const elementosFiltrados = Object.values<any>(filtrado)[0].elementos;
+        var elementosFiltrados;
+        if (Object.values<any>(filtrado)[0] == undefined) {
+            //elementosFiltrados = Object.values<any>(filtrado)[0].elementos;
+        } else {
+            elementosFiltrados = Object.values<any>(filtrado)[0].elementos;
+        }
         if (props.colorSeleccionado != null && props.colorSeleccionado != "null") {
             filteredByColor = elementosFiltrados.filter((filteredElement: any) => filteredElement.colores.indexOf(props.colorSeleccionado) > -1);
             if (filteredByColor.length == 0) {
@@ -39,12 +44,12 @@ export const List = (props: any) => {
 
     function cardsBuild(contenidoFiltrado: any) {
         var cards: any = [];
-        if (contenidoFiltrado.length > 0) {
+        if (contenidoFiltrado?.length > 0) {
             contenidoFiltrado.forEach((element: {
                 Display_url: string; Imagen: any; Image_small: any; Nombre_del_Lugar: any; url_destino: any; Display_name: any
             }, index: any) => {
                 if (element.Nombre_del_Lugar != "NOT FOUND") {
-                    cards.push(<GridCard img={element.Imagen} img_small={element.Image_small} alt={element.Display_name} imgname={element.Nombre_del_Lugar} linksrc={element.Display_url} delay={index / 10} key={index} />);
+                    cards.push(<GridCard lang={props.lang} img={element.Imagen} img_small={element.Image_small} alt={element.Display_name} imgname={element.Nombre_del_Lugar} linksrc={element.Display_url} delay={index / 10} key={index} />);
                 }
             });
             return cards;
@@ -52,10 +57,10 @@ export const List = (props: any) => {
             return (
                 <div className="flex flex-col justify-center items-center">
                     <h3 className="text-3xl">
-                        No wallpapers found :(
+                        {props.lang == "en" ? "No wallpapers found :(" : "No se encontraron wallpapers :("}
                     </h3>
                     <p className="text-xl mt-6">
-                        Try to use different filters.
+                        {props.lang == "en" ? "Try to use different filters." : "Intente utilizar otros filtros."}
                     </p>
                 </div>
             )
