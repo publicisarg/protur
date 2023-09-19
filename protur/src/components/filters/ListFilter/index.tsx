@@ -30,7 +30,7 @@ export const ListFilter = (props: any) => {
         ]
       )
     }
-  }, [])
+  }, [props.lang])
 
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Home");
   const [currentColor, setCurrentColor] = useState("null");
@@ -58,7 +58,7 @@ export const ListFilter = (props: any) => {
     <div className='listFilter'>
       <div className='flex px-5 md:p-0 md:gap-8 justify-between flex-col md:flex-row'>
         <div className='sm:flex grid grid-cols-2 sm:justify-center items-center sm:gap-8 gap-6 flex-wrap justify-between w-full sm:w-auto sm:flex-row'>
-          {categorias.map((categoria, index) => (
+          {false && categorias.map((categoria, index) => (
             <button
               className={`rounded text-[#999999] text-sm bg-white md:px-4 py-2 ${categoriaSeleccionada == categoria.value ? 'activo' : ''
                 }`}
@@ -69,7 +69,7 @@ export const ListFilter = (props: any) => {
             </button>
           ))}
         </div>
-        {true && <select className='pl-4 pr-8 py-2 rounded text-black border-neutral-400 border' onChange={(event) => handleColor(event)}>
+        {false && <select className='pl-4 pr-8 py-2 rounded text-black border-neutral-400 border' onChange={(event) => handleColor(event)}>
           <option value="null">Color</option>
           <option value="Black">{props.lang == "en" ? "Black" : "Negro"}</option>
           <option value="Blue">{props.lang == "en" ? "Blue" : "Azul"}</option>

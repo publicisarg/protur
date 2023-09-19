@@ -78,13 +78,13 @@ export const DownloadPopUp = (props: any) => {
           <div className='relative'>
             <motion.img variants={variantes} initial="hidden2" animate={control2} className="rounded-lg w-auto auxheightcorrection" src={props.imgsrc} />
             <motion.div variants={variantes} initial="hidden" whileHover="visible" className='absolute w-full h-full inset-0 flex justify-center items-center gap-4 bg-black/30 rounded-lg'>
-              <a onClick={handleDescarga}><IconButtomLeft name={props.lang == "en" ? "Download wallpaper" : "Descargar fondo de pantalla"} /></a>
+              <div onClick={handleDescarga}><IconButtomLeft name={props.lang == "en" ? "Download wallpaper" : "Descargar fondo de pantalla"} /></div>
               <span className='cursor-pointer' onClick={() => changePage(true)}><IconButtomRightDark name={props.lang == "en" ? "Work here" : "Trabajar aquí"} /></span>
             </motion.div>
           </div>
           <div className="flex flex-col sm:flex-row justify-end w-full mt-6 gap-4 sm:gap-0">
             <div className="flex flex-col sm:flex-row gap-4">
-              <motion.a variants={variantes} initial="hidden3" animate={control3} onClick={handleDescarga}><IconButtomLeft name={props.lang == "en" ? "Download wallpaper" : "Descargar fondo de pantalla"} /></motion.a>
+              <motion.div variants={variantes} initial="hidden3" animate={control3} onClick={handleDescarga}><IconButtomLeft name={props.lang == "en" ? "Download wallpaper" : "Descargar fondo de pantalla"} /></motion.div>
               <motion.span variants={variantes} initial="hidden3" animate={control3} onClick={() => changePage(true)}><IconButtomRightDark name={props.lang == "en" ? "Work here" : "Trabajar aquí"} /></motion.span>
             </div>
           </div>
@@ -105,7 +105,7 @@ export const DownloadPopUp = (props: any) => {
                 <p className='text-white text-2xl font-myriadpro'>Argentina</p>
               </div>
               <a href={props.lang == "en" ? "https://argentina.travel/en/" + props.linksrc : "https://argentina.travel/" + props.linksrc} target='_blank'>
-                <span className="text-white px-6 pt-3 pb-2 text-lg font-myriadpro rounded bg-[#2F2B83] cursor-pointer">{props.lang == "en" ? "Get more info!" : "Ver mas información!"}</span>
+                <span className="text-white px-6 pt-3 pb-2 text-lg font-myriadpro rounded bg-[#2F2B83] cursor-pointer">{props.lang == "en" ? "Know the destination" : "Conocer el destino"}</span>
               </a>
             </div>
           </motion.div>

@@ -10,7 +10,7 @@ export const Download = (props: any) => {
       <div className="flex flex-col sm:flex-row justify-between w-full mt-6 gap-4 sm:gap-0">
         <div onClick={() => {props.setMode(false)}}><IconButtomRight name={"Volver"}/></div>
         <div className="flex flex-col sm:flex-row gap-4">
-          <a href={props.imgsrc} download={props.imgname}><IconButtomLeft name={"Descargar fondo"}/></a>
+          <a download={props.imgsrc}><IconButtomLeft name={"Descargar fondo"}/></a>
           <a href={props.linksrc}><IconButtomRightDark name={"Trabajar aquí"}/></a>
         </div>
       </div>
